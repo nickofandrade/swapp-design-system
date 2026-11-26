@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#19151d">
+<title>Swapp Design System</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@500;600;700;800;900&display=swap');
+:root{--ink:#211b24;--muted:#766d79;--paper:#fbf9f7;--panel:#fff;--line:#eee8e5;--orange:#ff7b0d;--orange2:#ffa84c;--pink:#c40bd5;--pink2:#ea00ff;--peach:#e19c8a;--blue:#3a589a;--green:#1e9c78;--radius:18px;--shadow:0 14px 40px rgba(45,25,38,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 'DM Sans',sans-serif}
+button{font:inherit;cursor:pointer}.app{min-height:100vh}.sidebar{width:258px;background:#19151d;color:#f9f4f7;position:fixed;inset:0 auto 0 0;padding:25px 18px;overflow:auto;z-index:5}.brand{display:flex;align-items:center;gap:12px;padding:0 8px 26px;border-bottom:1px solid #39313b}.brand img{width:130px;height:auto;object-fit:contain;filter:drop-shadow(0 1px 0 rgba(255,255,255,.08))}.brand small{display:block;color:#a89ca9;font:10px 'DM Mono',monospace;letter-spacing:.13em;text-transform:uppercase;margin-top:3px}.nav-label{color:#8f8391;font:10px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.16em;padding:23px 10px 8px}.nav a{display:flex;align-items:center;gap:11px;color:#c9becb;text-decoration:none;padding:9px 11px;border-radius:10px;font-size:13px;margin:2px 0;transition:.2s}.nav a:hover,.nav a.active{background:#302633;color:white}.nav a.active{box-shadow:inset 3px 0 var(--orange)}.nav-icon{width:20px;text-align:center;font-size:16px;color:#ffa84c}.sidebar-foot{margin:30px 8px 0;padding-top:16px;border-top:1px solid #39313b;color:#8f8391;font-size:11px}
+main{margin-left:258px;max-width:1440px;padding:0 54px 90px}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);margin-bottom:54px}.crumb{font:11px 'DM Mono',monospace;color:#938994;letter-spacing:.06em}.version{font:11px 'DM Mono',monospace;background:#f2e9f1;color:#8d388d;padding:6px 10px;border-radius:30px}.section{padding:0 0 72px;scroll-margin-top:30px}.eyebrow{font:11px 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:14px}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center;padding:12px 0 62px}.hero h1{font:800 clamp(42px,5vw,68px)/1.02 'Nunito',sans-serif;letter-spacing:-.055em;margin:0 0 20px}.hero h1 span{color:var(--orange)}.hero p{color:var(--muted);font-size:17px;max-width:560px;margin:0 0 25px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:100px;padding:12px 19px;font-weight:700;font-size:13px;transition:.2s}.btn.primary{background:var(--orange);color:#fff;box-shadow:0 7px 16px #ff7b0d33}.btn.primary:hover{background:#ef6900;transform:translateY(-2px)}.btn.secondary{background:#fff;border:1px solid var(--line);color:var(--ink)}.hero-art{background:linear-gradient(135deg,#ffa84c,#ff7b0d);border-radius:30px;min-height:310px;position:relative;overflow:hidden;display:grid;place-items:center;box-shadow:var(--shadow)}.hero-art:before,.hero-art:after{content:"";position:absolute;border:2px solid rgba(255,255,255,.55);border-radius:48% 52% 44% 56%;transform:rotate(-22deg)}.hero-art:before{width:270px;height:210px;left:-65px;top:-60px}.hero-art:after{width:210px;height:270px;right:-50px;bottom:-120px}.hero-mark{font:900 92px 'Nunito';color:#fff;text-shadow:4px 5px 0 rgba(91,39,18,.14);transform:rotate(-7deg);z-index:1}.doodle{position:absolute;color:#fff;font-size:42px;z-index:1}.d1{top:25px;right:34px;transform:rotate(15deg)}.d2{bottom:22px;left:35px;transform:rotate(-15deg)}
+h2{font:800 34px/1.15 'Nunito';letter-spacing:-.035em;margin:0 0 10px}h3{font:800 19px 'Nunito';margin:0 0 8px}.lead{color:var(--muted);margin:0 0 26px;max-width:720px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:21px;box-shadow:0 4px 18px rgba(45,25,38,.025)}.stat{font:800 30px 'Nunito';letter-spacing:-.04em}.stat-label{color:var(--muted);font-size:12px}.swatch{height:76px;border-radius:12px;margin-bottom:14px;display:flex;align-items:flex-end;padding:10px;color:white;font:11px 'DM Mono',monospace}.token-name{font-weight:700;font-size:13px}.token-meta{color:var(--muted);font:11px 'DM Mono',monospace}.color-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.color-card{background:white;border:1px solid var(--line);border-radius:15px;padding:10px}.type-sample{background:white;border:1px solid var(--line);border-radius:15px;padding:20px;margin-bottom:12px}.type-meta{font:11px 'DM Mono',monospace;color:var(--muted);margin-top:10px}.type-display{font:800 44px/1 'Nunito';letter-spacing:-.05em}.type-body{font:15px/1.6 'DM Sans'}.type-mono{font:13px 'DM Mono'}
+.component-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.field{border:1px solid #e5dce2;border-radius:12px;padding:12px 14px;background:#fff;min-width:220px;color:var(--ink);outline:none}.field:focus{border-color:var(--pink);box-shadow:0 0 0 3px #c40bd51c}.pill{display:inline-flex;padding:5px 10px;border-radius:40px;font-size:11px;font-weight:700;background:#fff0e2;color:#c65b00}.pill.pink{background:#fce9fc;color:#a509ae}.pill.green{background:#e4f6ef;color:#187957}.demo-panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px;margin-top:18px}.demo-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.demo-label{font:10px 'DM Mono';text-transform:uppercase;letter-spacing:.12em;color:#9a8e99}.tabs{display:flex;gap:6px;background:#f5f0f3;padding:5px;border-radius:12px;width:max-content;margin-bottom:16px}.tabs button{border:0;background:transparent;padding:8px 13px;border-radius:9px;font-size:12px;color:var(--muted)}.tabs button.active{background:white;color:var(--ink);box-shadow:0 2px 6px #2c19200d}.radius-demo{height:75px;background:linear-gradient(135deg,#ffa84c,#ff7b0d);margin-bottom:12px}.radius-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.radius-card{background:#fff;border:1px solid var(--line);padding:13px;border-radius:14px}.radius-shape{height:55px;background:#fff0e2;border:1px solid #ffd3aa;margin-bottom:9px}.shadow-demo{height:70px;background:#fff;border-radius:15px;box-shadow:var(--shadow);margin-bottom:12px}
+.screen-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.screen-card{background:white;border:1px solid var(--line);border-radius:18px;padding:14px}.screen-thumb{height:230px;border-radius:13px;background:linear-gradient(145deg,#ffa84c,#ff7b0d);padding:17px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.phone{width:128px;height:205px;border-radius:17px;background:#fff;box-shadow:0 9px 30px #4b240d35;padding:12px 10px;color:#3b3038;font-size:8px;position:relative}.phone-top{height:18px;border-radius:7px;background:#ff7b0d;margin:-12px -10px 12px}.phone-logo{font:900 13px 'Nunito';color:#ff7b0d;margin-bottom:8px}.mini-line{height:5px;border-radius:4px;background:#eee;margin:6px 0}.mini-line.wide{width:100%}.mini-line.mid{width:68%}.mini-line.short{width:42%}.mini-btn{background:#ff7b0d;color:white;border-radius:20px;text-align:center;padding:6px;margin-top:12px;font-size:7px}.screen-title{font-weight:800;margin:12px 0 3px}.screen-desc{color:var(--muted);font-size:12px}.screen-link{display:inline-block;color:#a40cae;font-size:11px;font-weight:700;text-decoration:none;margin-top:8px}
+.icon-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.icon-card{background:white;border:1px solid var(--line);border-radius:15px;padding:15px;text-align:center}.icon-doodle{height:48px;display:grid;place-items:center;color:var(--orange);font-size:31px;font-family:'Nunito';font-weight:900}.icon-caption{font:10px 'DM Mono';color:var(--muted)}
+.callout{border-left:3px solid var(--orange);background:#fff5eb;border-radius:0 14px 14px 0;padding:16px 18px;color:#6f4c36;font-size:13px;margin-top:18px}.footer{border-top:1px solid var(--line);padding:28px 0;color:#948995;font-size:11px;display:flex;justify-content:space-between;gap:20px}
+.mobile-menu{display:none;background:#211b24;color:#fff;border:0;border-radius:10px;padding:8px 12px}
+@media(max-width:1100px){main{padding:0 32px 70px}.hero{grid-template-columns:1fr}.hero-art{min-height:230px}.screen-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.sidebar{transform:translateX(-100%);transition:.25s}.sidebar.open{transform:translateX(0)}main{margin-left:0;padding:0 20px 55px}.mobile-menu{display:block}.topbar{height:65px;margin-bottom:32px}.hero{padding-top:0}.grid{grid-template-columns:1fr 1fr}.color-grid{grid-template-columns:repeat(2,1fr)}.screen-grid{grid-template-columns:1fr 1fr}.icon-grid{grid-template-columns:repeat(3,1fr)}.radius-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.grid,.screen-grid{grid-template-columns:1fr}.hero h1{font-size:43px}.hero-art{min-height:190px}.hero-mark{font-size:70px}.footer{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brand-wordmark" aria-label="Swapp" style="font:900 34px Nunito,sans-serif;letter-spacing:-.08em;color:#ff7b0d">swapp<span style="color:#fff">!</span></div><div><small>DESIGN SYSTEM</small></div></div>
+  <nav class="nav">
+    <div class="nav-label">Comece aqui</div>
+    <a href="#overview" class="active"><span class="nav-icon">✳</span> Visão geral</a>
+    <a href="#principles"><span class="nav-icon">〰</span> Princípios</a>
+    <div class="nav-label">Fundamentos</div>
+    <a href="#colors"><span class="nav-icon">◉</span> Cores</a>
+    <a href="#typography"><span class="nav-icon">Aa</span> Tipografia</a>
+    <a href="#spacing"><span class="nav-icon">↔</span> Espaçamento e grid</a>
+    <a href="#shape"><span class="nav-icon">◒</span> Forma e elevação</a>
+    <div class="nav-label">Biblioteca</div>
+    <a href="#components"><span class="nav-icon">▣</span> Componentes</a>
+    <a href="#icons"><span class="nav-icon">✎</span> Ícones e ilustrações</a>
+    <a href="#screens"><span class="nav-icon">▤</span> Telas do produto</a>
+    <div class="nav-label">Recursos</div>
+    <a href="#guidelines"><span class="nav-icon">⌁</span> Diretrizes</a>
+  </nav>
+  <div class="sidebar-foot">SWAPP DS · CONCEITO 01<br>Construído a partir dos projetos originais</div>
+</aside>
+<main>
+  <div class="topbar"><div style="display:flex;align-items:center;gap:13px"><button class="mobile-menu" id="menuBtn">☰</button><span class="crumb">SWAPP / DESIGN SYSTEM</span></div><span class="version">FOUNDATION · V0.1</span></div>
+  <section class="hero section" id="overview">
+    <div><div class="eyebrow">Uma linguagem, muitas possibilidades</div><h1>Design that<br><span>moves.</span></h1><p>O sistema visual do Swapp. Uma base viva para criar experiências digitais simples, expressivas e reconhecíveis — com personalidade em cada detalhe.</p><div class="actions"><a class="btn primary" href="#components" style="text-decoration:none">Explorar componentes ↗</a><a class="btn secondary" href="#screens" style="text-decoration:none">Ver telas do produto</a></div></div>
+    <div class="hero-art"><span class="doodle d1">✳</span><span class="hero-mark">swapp!</span><span class="doodle d2">〰</span></div>
+  </section>
+  <section class="section" id="principles"><div class="eyebrow">01 / Direção</div><h2>Personalidade com propósito.</h2><p class="lead">O Swapp combina energia, proximidade e clareza. A evolução visual mantém o espírito lúdico da marca original, mas organiza a experiência com mais consistência e maturidade.</p>
+    <div class="grid">
+      <div class="card"><div class="stat">01</div><h3>Expressivo</h3><p class="stat-label">Cor, curvas e ícones desenhados dão ao produto uma assinatura própria.</p></div>
+      <div class="card"><div class="stat">02</div><h3>Direto</h3><p class="stat-label">Interfaces objetivas, hierarquia clara e ações fáceis de reconhecer.</p></div>
+      <div class="card"><div class="stat">03</div><h3>Humano</h3><p class="stat-label">Uma experiência acolhedora, sem perder precisão ou eficiência.</p></div>
+    </div>
+  </section>
+  <section class="section" id="colors"><div class="eyebrow">02 / Fundamentos</div><h2>Uma paleta cheia de energia.</h2><p class="lead">As cores foram extraídas dos projetos originais do Swapp e reorganizadas em papéis mais claros. O laranja lidera a ação; o magenta entra como acento expressivo; tons neutros dão equilíbrio e legibilidade.</p>
+    <div class="color-grid">
+      <div class="color-card"><div class="swatch" style="background:#ff7b0d">#FF7B0D</div><div class="token-name">Swapp Orange</div><div class="token-meta">brand / primary</div></div>
+      <div class="color-card"><div class="swatch" style="background:#ffa84c">#FFA84C</div><div class="token-name">Tangerine</div><div class="token-meta">brand / light</div></div>
+      <div class="color-card"><div class="swatch" style="background:#c40bd5">#C40BD5</div><div class="token-name">Electric Plum</div><div class="token-meta">accent / primary</div></div>
+      <div class="color-card"><div class="swatch" style="background:#ea00ff">#EA00FF</div><div class="token-name">Neon Orchid</div><div class="token-meta">accent / highlight</div></div>
+      <div class="color-card"><div class="swatch" style="background:#e19c8a">#E19C8A</div><div class="token-name">Soft Coral</div><div class="token-meta">support / warm</div></div>
+      <div class="color-card"><div class="swatch" style="background:#3a589a">#3A589A</div><div class="token-name">Social Blue</div><div class="token-meta">semantic / social</div></div>
+      <div class="color-card"><div class="swatch" style="background:#211b24">#211B24</div><div class="token-name">Ink</div><div class="token-meta">neutral / strong</div></div>
+      <div class="color-card"><div class="swatch" style="background:#fbf9f7;color:#766d79;border:1px solid #eee8e5">#FBF9F7</div><div class="token-name">Warm Paper</div><div class="token-meta">surface / base</div></div>
+    </div>
+    <div class="callout"><strong>Nota de evolução:</strong> a paleta original tinha gradientes fortes em quase todas as telas. Nesta proposta, os gradientes passam a ser recursos de destaque; superfícies e áreas de leitura usam tons mais calmos.</div>
+  </section>
+  <section class="section" id="typography"><div class="eyebrow">03 / Fundamentos</div><h2>Tipografia com voz própria.</h2><p class="lead">Uma combinação de display arredondada para títulos, sans-serif funcional para leitura e mono para metadados e especificações.</p>
+    <div class="type-sample"><div class="type-display">Trocar. Conectar. Seguir.</div><div class="type-meta">NUNITO EXTRA BOLD · DISPLAY / 44 PX</div></div>
+    <div class="type-sample"><div class="type-body">Experiências simples aproximam pessoas e tornam cada troca mais fácil. A interface deve ajudar a entender o que está acontecendo e qual é o próximo passo.</div><div class="type-meta">DM SANS · BODY / 15 PX · LINE HEIGHT 1.6</div></div>
+    <div class="type-sample"><div class="type-mono">COLOR.PRIMARY.500&nbsp;&nbsp; #FF7B0D</div><div class="type-meta">DM MONO · LABEL / TOKEN / CODE</div></div>
+  </section>
+  <section class="section" id="spacing"><div class="eyebrow">04 / Fundamentos</div><h2>Ritmo e espaçamento.</h2><p class="lead">Uma escala baseada em múltiplos de 4 ajuda a criar ritmo consistente entre elementos, componentes e páginas.</p>
+    <div class="card">
+      <div style="display:grid;gap:12px">
+        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">04</span><div style="height:10px;width:16px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">4 px · micro</span></div>
+        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">08</span><div style="height:10px;width:32px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">8 px · compact</span></div>
+        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">12</span><div style="height:10px;width:48px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">12 px · tight</span></div>
+        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">16</span><div style="height:10px;width:64px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">16 px · default</span></div>
+        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">24</span><div style="height:10px;width:96px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">24 px · relaxed</span></div>
+        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">32</span><div style="height:10px;width:128px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">32 px · section</span></div>
+        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">48</span><div style="height:10px;width:192px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">48 px · layout</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="shape"><div class="eyebrow">05 / Fundamentos</div><h2>Formas amigáveis. Estrutura sólida.</h2><p class="lead">Cantos arredondados e superfícies suaves preservam a proximidade da marca. A elevação deve ser discreta e ajudar a entender a hierarquia.</p>
+    <div class="radius-grid">
+      <div class="radius-card"><div class="radius-shape" style="border-radius:6px"></div><div class="token-name">Small · 6 px</div></div>
+      <div class="radius-card"><div class="radius-shape" style="border-radius:12px"></div><div class="token-name">Medium · 12 px</div></div>
+      <div class="radius-card"><div class="radius-shape" style="border-radius:18px"></div><div class="token-name">Large · 18 px</div></div>
+      <div class="radius-card"><div class="radius-shape" style="border-radius:999px"></div><div class="token-name">Pill · 999 px</div></div>
+    </div>
+    <div class="demo-panel"><div class="demo-head"><strong>Elevação padrão</strong><span class="demo-label">SHADOW / 01</span></div><div class="shadow-demo"></div><div class="token-meta">0 14px 40px · rgba(45,25,38,.08)</div></div>
+  </section>
+  <section class="section" id="components"><div class="eyebrow">06 / Biblioteca</div><h2>Componentes em contexto.</h2><p class="lead">Elementos básicos com estados e variações. Esta primeira versão apresenta uma base visual para evoluir conforme os fluxos reais do aplicativo forem detalhados.</p>
+    <div class="demo-panel"><div class="demo-head"><strong>Botões</strong><span class="demo-label">BUTTON / VARIANTS</span></div><div class="component-row"><button class="btn primary">Começar agora ↗</button><button class="btn secondary">Saiba mais</button><button class="btn" style="background:#fce9fc;color:#a509ae">Ação alternativa</button><button class="btn" disabled style="background:#eee;color:#aaa">Indisponível</button></div></div>
+    <div class="demo-panel"><div class="demo-head"><strong>Campos e seleção</strong><span class="demo-label">INPUT / SELECT</span></div><div class="component-row"><input class="field" placeholder="Seu nome"><select class="field"><option>Escolha uma cidade</option><option>São Paulo</option><option>Campinas</option></select></div></div>
+    <div class="demo-panel"><div class="demo-head"><strong>Status e etiquetas</strong><span class="demo-label">BADGE / STATUS</span></div><div class="component-row"><span class="pill">Disponível</span><span class="pill pink">Novo</span><span class="pill green">Concluído</span></div></div>
+    <div class="demo-panel"><div class="demo-head"><strong>Interação de abas</strong><span class="demo-label">TABS / INTERACTIVE</span></div><div class="tabs"><button class="active" data-tab="resumo">Resumo</button><button data-tab="atividade">Atividade</button><button data-tab="detalhes">Detalhes</button></div><div id="tabContent" style="color:var(--muted);font-size:13px">Visão rápida das informações principais do item.</div></div>
+  </section>
+  <section class="section" id="icons"><div class="eyebrow">07 / Linguagem gráfica</div><h2>Ícones com traço e atitude.</h2><p class="lead">O logo tem desenho orgânico, contorno expressivo e movimento. Os ícones devem seguir essa linguagem: formas simples, traço arredondado e personalidade — sem competir com a informação.</p>
+    <div class="icon-grid">
+      <div class="icon-card"><div class="icon-doodle">↗</div><div class="icon-caption">EXPLORE</div></div>
+      <div class="icon-card"><div class="icon-doodle">♡</div><div class="icon-caption">FAVORITE</div></div>
+      <div class="icon-card"><div class="icon-doodle">⌁</div><div class="icon-caption">SWAP</div></div>
+      <div class="icon-card"><div class="icon-doodle">✳</div><div class="icon-caption">DISCOVER</div></div>
+      <div class="icon-card"><div class="icon-doodle">☺</div><div class="icon-caption">PROFILE</div></div>
+      <div class="icon-card"><div class="icon-doodle">＋</div><div class="icon-caption">ADD</div></div>
+    </div>
+    <div class="callout"><strong>Direção de arte:</strong> estes glifos são placeholders para demonstrar o peso e o espírito visual. A biblioteca final deve usar ícones vetoriais originais, desenhados com terminais arredondados e um leve caráter artesanal.</div>
+  </section>
+  <section class="section" id="screens"><div class="eyebrow">08 / Produto</div><h2>Telas que deram origem ao sistema.</h2><p class="lead">Os projetos enviados foram agrupados como referências de produto. Os previews abaixo são representações esquemáticas para documentar a família de telas — não capturas pixel a pixel dos Pens originais.</p>
+    <div class="screen-grid" id="screenGrid"></div>
+  </section>
+  <section class="section" id="guidelines"><div class="eyebrow">09 / Diretrizes</div><h2>Consistência em cada troca.</h2><p class="lead">O sistema deve facilitar decisões e acelerar novas telas sem apagar a personalidade do Swapp.</p>
+    <div class="grid">
+      <div class="card"><h3>Use cor com intenção</h3><p class="stat-label">Laranja para ações primárias; magenta para acentos; neutros para leitura e estrutura.</p></div>
+      <div class="card"><h3>Priorize a clareza</h3><p class="stat-label">Uma ação principal por contexto. Rótulos curtos, linguagem direta e estados visíveis.</p></div>
+      <div class="card"><h3>Desenhe para mobile</h3><p class="stat-label">Os layouts devem começar pelo uso em telas pequenas e expandir com consistência.</p></div>
+    </div>
+    <div class="callout"><strong>Próxima etapa recomendada:</strong> validar esta direção com as telas originais completas, fechar os tokens definitivos e transformar os padrões recorrentes em componentes documentados com estados, medidas e regras de uso.</div>
+  </section>
+  <footer class="footer"><span>SWAPP DESIGN SYSTEM · CONCEITO 01</span><span>Uma base viva para experiências melhores.</span></footer>
+</main>
+</div>
+<script>
+const screens=[
+["Landing Page","Apresentação da proposta e chamada para ação.","WEvoby","landing-page"],
+["Sign Up","Entrada simples com cadastro e acesso social.","GvRbPp","sign-up"],
+["User Profile","Perfil, identidade e informações do usuário.","yoOoEg","user-profile"],
+["Settings","Preferências e configurações da conta.","GvqqBy","settings"],
+["Calculator","Ferramenta de cálculo com interação direta.","Xamrer","calculator"],
+["Credit Card Checkout","Fluxo de pagamento e confirmação.","gxbBwv","credit-card-checkout"],
+["App Icon","Símbolo visual para o aplicativo.","MvaGzV","app-icon"],
+["404 Page","Estado vazio e recuperação de navegação.","BdzgJm","404-page"]
+];
+const grid=document.getElementById('screenGrid');
+grid.innerHTML=screens.map((s,i)=>`<article class="screen-card"><div class="screen-thumb"><div class="phone"><div class="phone-top"></div><div class="phone-logo">swapp!</div>${i===1?'<div class="mini-line wide"></div><div class="mini-line mid"></div><div class="mini-line wide"></div><div class="mini-btn">START SWAPPING</div>':i===2?'<div style="height:36px;width:36px;border-radius:50%;background:#ffe0c2;margin:8px auto"></div><div class="mini-line mid" style="margin:auto"></div><div class="mini-line wide"></div><div class="mini-line wide"></div>':i===3?'<div class="mini-line wide"></div><div class="mini-line mid"></div><div class="mini-line wide"></div><div class="mini-line short"></div>':i===4?'<div style="font:22px Nunito;color:#ff7b0d;text-align:right;margin:20px 0">128</div><div class="mini-line wide"></div><div class="mini-line wide"></div><div class="mini-line wide"></div>':i===5?'<div class="mini-line wide"></div><div class="mini-line mid"></div><div style="height:35px;border:1px solid #eee;border-radius:6px;margin:10px 0"></div><div class="mini-btn">PAY NOW</div>':i===6?'<div style="font:42px Nunito;color:#ff7b0d;text-align:center;margin:36px 0">S</div>':i===7?'<div style="font:28px Nunito;color:#ff7b0d;text-align:center;margin:35px 0">404</div><div class="mini-line mid" style="margin:auto"></div>':'<div class="mini-line wide"></div><div class="mini-line mid"></div><div class="mini-btn">DISCOVER SWAPP</div>'}</div></div><div class="screen-title">${s[0]}</div><div class="screen-desc">${s[1]}</div><a class="screen-link" href="https://codepen.io/andrade_nicko/pen/${s[2]}" target="_blank" rel="noreferrer">Abrir projeto original ↗</a></article>`).join('');
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');const content={resumo:'Visão rápida das informações principais do item.',atividade:'Histórico de ações e atualizações recentes.',detalhes:'Dados completos, preferências e informações adicionais.'};document.getElementById('tabContent').textContent=content[b.dataset.tab]}));
+const links=[...document.querySelectorAll('.nav a')];const sections=links.map(a=>document.querySelector(a.getAttribute('href')));const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-25% 0px -65% 0px'});sections.forEach(s=>s&&observer.observe(s));
+document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('sidebar').classList.toggle('open'));links.forEach(a=>a.addEventListener('click',()=>document.getElementById('sidebar').classList.remove('open')));
+</script>
+</body></html>
