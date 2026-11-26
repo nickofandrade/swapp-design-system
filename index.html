@@ -1,147 +1,224 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#19151d">
-<title>Swapp Design System</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#211b24">
+<title>Swapp — Biblioteca de componentes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@400;700&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@500;600;700;800;900&display=swap');
-:root{--ink:#211b24;--muted:#766d79;--paper:#fbf9f7;--panel:#fff;--line:#eee8e5;--orange:#ff7b0d;--orange2:#ffa84c;--pink:#c40bd5;--pink2:#ea00ff;--peach:#e19c8a;--blue:#3a589a;--green:#1e9c78;--radius:18px;--shadow:0 14px 40px rgba(45,25,38,.08)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 'DM Sans',sans-serif}
-button{font:inherit;cursor:pointer}.app{min-height:100vh}.sidebar{width:258px;background:#19151d;color:#f9f4f7;position:fixed;inset:0 auto 0 0;padding:25px 18px;overflow:auto;z-index:5}.brand{display:flex;align-items:center;gap:12px;padding:0 8px 26px;border-bottom:1px solid #39313b}.brand img{width:130px;height:auto;object-fit:contain;filter:drop-shadow(0 1px 0 rgba(255,255,255,.08))}.brand small{display:block;color:#a89ca9;font:10px 'DM Mono',monospace;letter-spacing:.13em;text-transform:uppercase;margin-top:3px}.nav-label{color:#8f8391;font:10px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:.16em;padding:23px 10px 8px}.nav a{display:flex;align-items:center;gap:11px;color:#c9becb;text-decoration:none;padding:9px 11px;border-radius:10px;font-size:13px;margin:2px 0;transition:.2s}.nav a:hover,.nav a.active{background:#302633;color:white}.nav a.active{box-shadow:inset 3px 0 var(--orange)}.nav-icon{width:20px;text-align:center;font-size:16px;color:#ffa84c}.sidebar-foot{margin:30px 8px 0;padding-top:16px;border-top:1px solid #39313b;color:#8f8391;font-size:11px}
-main{margin-left:258px;max-width:1440px;padding:0 54px 90px}.topbar{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);margin-bottom:54px}.crumb{font:11px 'DM Mono',monospace;color:#938994;letter-spacing:.06em}.version{font:11px 'DM Mono',monospace;background:#f2e9f1;color:#8d388d;padding:6px 10px;border-radius:30px}.section{padding:0 0 72px;scroll-margin-top:30px}.eyebrow{font:11px 'DM Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:14px}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center;padding:12px 0 62px}.hero h1{font:800 clamp(42px,5vw,68px)/1.02 'Nunito',sans-serif;letter-spacing:-.055em;margin:0 0 20px}.hero h1 span{color:var(--orange)}.hero p{color:var(--muted);font-size:17px;max-width:560px;margin:0 0 25px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:100px;padding:12px 19px;font-weight:700;font-size:13px;transition:.2s}.btn.primary{background:var(--orange);color:#fff;box-shadow:0 7px 16px #ff7b0d33}.btn.primary:hover{background:#ef6900;transform:translateY(-2px)}.btn.secondary{background:#fff;border:1px solid var(--line);color:var(--ink)}.hero-art{background:linear-gradient(135deg,#ffa84c,#ff7b0d);border-radius:30px;min-height:310px;position:relative;overflow:hidden;display:grid;place-items:center;box-shadow:var(--shadow)}.hero-art:before,.hero-art:after{content:"";position:absolute;border:2px solid rgba(255,255,255,.55);border-radius:48% 52% 44% 56%;transform:rotate(-22deg)}.hero-art:before{width:270px;height:210px;left:-65px;top:-60px}.hero-art:after{width:210px;height:270px;right:-50px;bottom:-120px}.hero-mark{font:900 92px 'Nunito';color:#fff;text-shadow:4px 5px 0 rgba(91,39,18,.14);transform:rotate(-7deg);z-index:1}.doodle{position:absolute;color:#fff;font-size:42px;z-index:1}.d1{top:25px;right:34px;transform:rotate(15deg)}.d2{bottom:22px;left:35px;transform:rotate(-15deg)}
-h2{font:800 34px/1.15 'Nunito';letter-spacing:-.035em;margin:0 0 10px}h3{font:800 19px 'Nunito';margin:0 0 8px}.lead{color:var(--muted);margin:0 0 26px;max-width:720px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:21px;box-shadow:0 4px 18px rgba(45,25,38,.025)}.stat{font:800 30px 'Nunito';letter-spacing:-.04em}.stat-label{color:var(--muted);font-size:12px}.swatch{height:76px;border-radius:12px;margin-bottom:14px;display:flex;align-items:flex-end;padding:10px;color:white;font:11px 'DM Mono',monospace}.token-name{font-weight:700;font-size:13px}.token-meta{color:var(--muted);font:11px 'DM Mono',monospace}.color-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.color-card{background:white;border:1px solid var(--line);border-radius:15px;padding:10px}.type-sample{background:white;border:1px solid var(--line);border-radius:15px;padding:20px;margin-bottom:12px}.type-meta{font:11px 'DM Mono',monospace;color:var(--muted);margin-top:10px}.type-display{font:800 44px/1 'Nunito';letter-spacing:-.05em}.type-body{font:15px/1.6 'DM Sans'}.type-mono{font:13px 'DM Mono'}
-.component-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.field{border:1px solid #e5dce2;border-radius:12px;padding:12px 14px;background:#fff;min-width:220px;color:var(--ink);outline:none}.field:focus{border-color:var(--pink);box-shadow:0 0 0 3px #c40bd51c}.pill{display:inline-flex;padding:5px 10px;border-radius:40px;font-size:11px;font-weight:700;background:#fff0e2;color:#c65b00}.pill.pink{background:#fce9fc;color:#a509ae}.pill.green{background:#e4f6ef;color:#187957}.demo-panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px;margin-top:18px}.demo-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.demo-label{font:10px 'DM Mono';text-transform:uppercase;letter-spacing:.12em;color:#9a8e99}.tabs{display:flex;gap:6px;background:#f5f0f3;padding:5px;border-radius:12px;width:max-content;margin-bottom:16px}.tabs button{border:0;background:transparent;padding:8px 13px;border-radius:9px;font-size:12px;color:var(--muted)}.tabs button.active{background:white;color:var(--ink);box-shadow:0 2px 6px #2c19200d}.radius-demo{height:75px;background:linear-gradient(135deg,#ffa84c,#ff7b0d);margin-bottom:12px}.radius-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.radius-card{background:#fff;border:1px solid var(--line);padding:13px;border-radius:14px}.radius-shape{height:55px;background:#fff0e2;border:1px solid #ffd3aa;margin-bottom:9px}.shadow-demo{height:70px;background:#fff;border-radius:15px;box-shadow:var(--shadow);margin-bottom:12px}
-.screen-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.screen-card{background:white;border:1px solid var(--line);border-radius:18px;padding:14px}.screen-thumb{height:230px;border-radius:13px;background:linear-gradient(145deg,#ffa84c,#ff7b0d);padding:17px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}.phone{width:128px;height:205px;border-radius:17px;background:#fff;box-shadow:0 9px 30px #4b240d35;padding:12px 10px;color:#3b3038;font-size:8px;position:relative}.phone-top{height:18px;border-radius:7px;background:#ff7b0d;margin:-12px -10px 12px}.phone-logo{font:900 13px 'Nunito';color:#ff7b0d;margin-bottom:8px}.mini-line{height:5px;border-radius:4px;background:#eee;margin:6px 0}.mini-line.wide{width:100%}.mini-line.mid{width:68%}.mini-line.short{width:42%}.mini-btn{background:#ff7b0d;color:white;border-radius:20px;text-align:center;padding:6px;margin-top:12px;font-size:7px}.screen-title{font-weight:800;margin:12px 0 3px}.screen-desc{color:var(--muted);font-size:12px}.screen-link{display:inline-block;color:#a40cae;font-size:11px;font-weight:700;text-decoration:none;margin-top:8px}
-.icon-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}.icon-card{background:white;border:1px solid var(--line);border-radius:15px;padding:15px;text-align:center}.icon-doodle{height:48px;display:grid;place-items:center;color:var(--orange);font-size:31px;font-family:'Nunito';font-weight:900}.icon-caption{font:10px 'DM Mono';color:var(--muted)}
-.callout{border-left:3px solid var(--orange);background:#fff5eb;border-radius:0 14px 14px 0;padding:16px 18px;color:#6f4c36;font-size:13px;margin-top:18px}.footer{border-top:1px solid var(--line);padding:28px 0;color:#948995;font-size:11px;display:flex;justify-content:space-between;gap:20px}
-.mobile-menu{display:none;background:#211b24;color:#fff;border:0;border-radius:10px;padding:8px 12px}
-@media(max-width:1100px){main{padding:0 32px 70px}.hero{grid-template-columns:1fr}.hero-art{min-height:230px}.screen-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:760px){.sidebar{transform:translateX(-100%);transition:.25s}.sidebar.open{transform:translateX(0)}main{margin-left:0;padding:0 20px 55px}.mobile-menu{display:block}.topbar{height:65px;margin-bottom:32px}.hero{padding-top:0}.grid{grid-template-columns:1fr 1fr}.color-grid{grid-template-columns:repeat(2,1fr)}.screen-grid{grid-template-columns:1fr 1fr}.icon-grid{grid-template-columns:repeat(3,1fr)}.radius-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.grid,.screen-grid{grid-template-columns:1fr}.hero h1{font-size:43px}.hero-art{min-height:190px}.hero-mark{font-size:70px}.footer{flex-direction:column}}
+:root{
+  --orange:#ff7b0d; --orange-light:#ffa84c; --orange-top:#ff7f13; --orange-border:#ffa200;
+  --magenta:#c40bd5; --magenta-hover:#ea00ff; --facebook:#3a589a; --facebook-hover:#4e6db2;
+  --coral:#e19c8a; --placeholder:#e1e1e1;
+  --ink:#211b24; --muted:#756d78; --paper:#fbf9f7; --white:#fff; --line:#eee7e3;
+  --ui-font:'Averia Sans Libre',system-ui,sans-serif; --doc-font:'DM Sans',system-ui,sans-serif; --mono:'DM Mono',monospace;
+  --shadow:0 12px 32px rgba(42,25,32,.08); --radius:14px;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}
+body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.6 var(--doc-font)}
+button,input{font:inherit}button{cursor:pointer}
+a{color:inherit}
+.sidebar{position:fixed;inset:0 auto 0 0;width:248px;background:#211b24;color:#f7f1f5;padding:22px 16px;overflow:auto;z-index:10}
+.brand-panel{background:#fff;border-radius:12px;padding:9px 12px;margin:0 6px 22px;display:flex;align-items:center;justify-content:center;min-height:78px}
+.brand-panel img{display:block;width:138px;height:auto;max-height:70px;object-fit:contain}
+.brand-caption{font:10px var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#a99eaa;margin:0 9px 16px}
+.nav-label{font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#9e929f;padding:14px 10px 7px}
+.nav a{display:flex;align-items:center;gap:11px;text-decoration:none;color:#d1c8d2;padding:9px 10px;border-radius:9px;margin:2px 0;font-size:13px;transition:.18s}
+.nav a:hover,.nav a.active{background:#382d3a;color:#fff}.nav a.active{box-shadow:inset 3px 0 var(--orange-light)}
+.nav svg{width:17px;height:17px;stroke:var(--orange-light);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.side-note{border-top:1px solid #443847;margin:24px 7px 0;padding:15px 3px;color:#a99eaa;font-size:11px;line-height:1.55}
+main{margin-left:248px;max-width:1500px;padding:0 48px 70px}
+.topbar{height:68px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);margin-bottom:38px}
+.crumb{font:10px var(--mono);letter-spacing:.09em;text-transform:uppercase;color:#948a95}
+.version{background:#f4e8f4;color:#92219d;border-radius:30px;padding:5px 10px;font:10px var(--mono)}
+.mobile-menu{display:none;border:0;background:#211b24;color:#fff;border-radius:8px;padding:7px 10px}
+.page-intro{padding-bottom:30px;border-bottom:1px solid var(--line);margin-bottom:36px;display:flex;gap:25px;align-items:flex-end;justify-content:space-between}
+.kicker{color:var(--magenta);font:10px var(--mono);letter-spacing:.15em;text-transform:uppercase;margin:0 0 9px}
+h1{font-size:40px;line-height:1.08;letter-spacing:-.04em;margin:0 0 10px;font-weight:700}
+.page-intro p{color:var(--muted);font-size:15px;max-width:690px;margin:0}
+.intro-mark{width:92px;height:92px;border-radius:24px;background:linear-gradient(140deg,var(--orange-light),var(--orange));display:grid;place-items:center;color:#fff;flex:none;box-shadow:0 10px 25px #ff7b0d30}
+.intro-mark svg{width:49px;height:49px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.color-strip{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:18px 0 0}
+.color-chip{width:17px;height:17px;border-radius:5px;border:1px solid #00000012}.color-note{font:10px var(--mono);color:#938995;margin-left:4px}
+.section{padding:0 0 44px;margin:0 0 42px;border-bottom:1px solid var(--line);scroll-margin-top:24px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:15px;margin-bottom:17px}
+.section-index{font:10px var(--mono);color:var(--magenta);letter-spacing:.12em;margin-bottom:5px}
+h2{font-size:25px;line-height:1.2;letter-spacing:-.025em;margin:0;font-weight:700}
+.section-desc{color:var(--muted);max-width:760px;margin:8px 0 0;font-size:13px}
+.count{font:10px var(--mono);color:#938995;white-space:nowrap}
+.component-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.component-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;min-width:0}
+.component-top{padding:15px 17px 10px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.component-top h3{font-size:15px;margin:0;font-weight:700}.source-tag{font:9px var(--mono);color:#948a95;background:#f8f4f2;padding:4px 7px;border-radius:20px;white-space:nowrap}
+.preview{padding:18px;background:#fff;min-height:116px;display:flex;align-items:center;justify-content:center;gap:11px;flex-wrap:wrap;border-top:1px solid #f3eeeb;border-bottom:1px solid #f3eeeb}
+.preview.warm{background:#fffaf6}.preview.gradient{background:linear-gradient(135deg,var(--orange-light),var(--orange));color:#fff}
+.spec-row{padding:10px 16px;display:flex;gap:8px;flex-wrap:wrap;color:#827985;font:10px var(--mono)}
+.spec-row span{background:#f8f4f2;padding:4px 7px;border-radius:5px}
+.evolution{margin:0 15px 15px;padding:10px 12px;border-left:3px solid var(--orange);background:#fff6ed;color:#6b4b38;border-radius:0 8px 8px 0;font-size:11px;line-height:1.5}
+.evolution strong{color:#a44b00}
+.ui-btn{border:0;border-radius:50px;min-height:44px;padding:0 21px;color:#fff;font:15px var(--ui-font);text-transform:uppercase;letter-spacing:.01em;background:var(--magenta);box-shadow:none;transition:.2s}
+.ui-btn:hover{background:var(--magenta-hover);box-shadow:0 5px 13px #c40bd52c;transform:translateY(-1px)}
+.ui-btn.orange{background:var(--orange)}.ui-btn.orange:hover{background:#e96c00}
+.ui-btn.outline{background:#fff;color:var(--magenta);border:1px solid var(--magenta)}.ui-btn.outline:hover{background:#fff4ff}
+.ui-btn:disabled{background:#d9d1d8;color:#fff;cursor:not-allowed;transform:none;box-shadow:none}
+.ui-social{height:48px;min-width:220px;padding:0 19px;border:0;border-radius:8px;background:var(--facebook);color:#fff;font:14px var(--ui-font);display:flex;align-items:center;justify-content:center;gap:10px;transition:.2s}
+.ui-social:hover{background:var(--facebook-hover)}.ui-social svg{width:18px;height:18px;fill:white;stroke:none}
+.ui-icon-btn{width:44px;height:44px;border-radius:50%;border:0;background:var(--magenta);display:grid;place-items:center;color:#fff;transition:.2s}
+.ui-icon-btn:hover{background:var(--magenta-hover);transform:translateY(-1px)}.ui-icon-btn svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.form-demo{width:min(100%,320px);display:grid;gap:9px}.field-label{font:12px var(--ui-font);color:#5a4f5b}.ui-field{width:100%;height:46px;border:1px solid var(--orange-border);border-radius:50px;padding:0 16px;background:#fff;color:#534854;font:14px var(--ui-font);outline:none;transition:.2s}
+.ui-field::placeholder{color:#cfc4cd}.ui-field:focus{border-color:var(--magenta);box-shadow:0 0 0 3px #c40bd51a}.ui-field.error{border-color:#cf3d3d}.field-help{font:10px var(--doc-font);color:#c43d3d;margin-top:-5px}
+.field-wrap{position:relative}.field-wrap .ui-field{padding-right:49px}.field-action{position:absolute;right:8px;top:6px;width:34px;height:34px;border:0;border-radius:50%;background:#fff3e8;color:#a94f0a;display:grid;place-items:center}.field-action svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.8}
+.mini-screen{width:100%;max-width:300px;background:linear-gradient(135deg,var(--orange-light),var(--orange));border-radius:9px;padding:0;color:#fff;overflow:hidden;font:14px var(--ui-font);box-shadow:0 10px 25px #4a281c18}
+.mini-top{height:44px;background:var(--orange-top);display:flex;align-items:center;justify-content:space-between;padding:0 14px}.mini-top strong{font-weight:400}.mini-top svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.8}
+.settings-row{height:51px;border-top:1px solid #ffffff3d;display:flex;align-items:center;justify-content:space-between;padding:0 13px;gap:12px}.settings-left{display:flex;align-items:center;gap:10px}.settings-left svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:1.7}.settings-action{font-size:12px;color:#fff9}
+.badge{display:inline-flex;align-items:center;justify-content:center;min-width:25px;height:24px;border-radius:50px;background:#fff;color:var(--coral);font:12px var(--ui-font);padding:0 8px}
+.toggle{display:inline-flex;align-items:center;gap:9px;cursor:pointer;font:12px var(--ui-font);color:#665a66}.toggle input{position:absolute;opacity:0;pointer-events:none}.track{width:42px;height:22px;background:#ccc;border-radius:20px;position:relative;transition:.2s}.track:after{content:"";position:absolute;left:3px;top:3px;width:16px;height:16px;background:#fff;border-radius:50%;transition:.2s;box-shadow:0 1px 3px #0002}.toggle input:checked+.track{background:var(--orange)}.toggle input:checked+.track:after{transform:translateX(20px)}.toggle input:focus-visible+.track{outline:3px solid #c40bd536;outline-offset:2px}
+.profile-demo{width:100%;max-width:320px;background:linear-gradient(135deg,var(--orange-light),var(--orange));border-radius:10px;padding:19px 16px 16px;color:#fff;font-family:var(--ui-font);text-align:center}.avatar{width:76px;height:76px;border:3px solid #fff;border-radius:50%;background:#fff4e8;color:var(--orange);display:grid;place-items:center;margin:0 auto 9px;font-size:27px}.profile-demo h4{font-size:21px;font-weight:400;margin:0}.profile-demo p{font-size:12px;margin:1px 0 14px;color:#fffde9}.profile-stats{display:flex;justify-content:center;gap:10px;margin-bottom:13px}.profile-stat{background:#ffffff22;border:1px solid #ffffff31;padding:7px 12px;border-radius:8px;font-size:11px}.profile-actions{display:flex;justify-content:center;gap:10px}.profile-actions .ui-icon-btn{width:40px;height:40px;background:var(--magenta)}
+.checkbox{display:flex;align-items:center;gap:9px;font:13px var(--ui-font);color:#5e5360}.checkbox input{appearance:none;width:18px;height:18px;border:1px solid var(--orange-border);border-radius:4px;background:#fff;margin:0;display:grid;place-items:center}.checkbox input:checked{background:var(--magenta);border-color:var(--magenta)}.checkbox input:checked:after{content:"✓";color:#fff;font:13px var(--doc-font);font-weight:700}
+.pay-card{width:min(100%,320px);background:linear-gradient(135deg,var(--orange-light),var(--orange));padding:17px;border-radius:10px;color:#fff;font:13px var(--ui-font)}.pay-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.pay-title svg{width:23px;height:23px;stroke:#fff;fill:none;stroke-width:1.7}.pay-card .ui-field{height:39px;font-size:12px;margin:4px 0}.pay-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pay-foot{display:flex;justify-content:space-between;align-items:center;margin-top:11px;font-size:11px}
+.calc{width:220px;background:linear-gradient(140deg,var(--orange-light),var(--orange));border-radius:10px;padding:14px;color:#fff;font-family:var(--ui-font);box-shadow:0 8px 20px #4a281c16}.calc-display{text-align:right;font-size:30px;line-height:1.6;padding:8px 8px 18px;min-height:68px;overflow:hidden}.calc-keys{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.calc-key{height:39px;border:0;border-radius:50%;background:#fff;color:var(--coral);font:18px var(--ui-font)}.calc-key.operator{background:var(--magenta);color:#fff}.calc-key.operator:hover{background:var(--magenta-hover)}.calc-key:active{transform:scale(.95)}.calc-key.wide{grid-column:span 2;border-radius:28px;text-align:left;padding-left:15px}
+.icon-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.icon-item{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 7px;text-align:center;display:grid;gap:7px;justify-items:center}.icon-item svg{width:23px;height:23px;color:var(--orange);stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}.icon-item span{font:9px var(--mono);color:#807583}
+.note-panel{border:1px solid #f1d9f0;background:#fff8ff;border-radius:11px;padding:15px 17px;color:#655365;font-size:12px;margin-top:17px}.note-panel strong{color:#93229b}
+.code-toggle{border:0;background:none;color:#93229b;font:10px var(--mono);padding:7px 16px 11px}.code{display:none;margin:0 15px 14px;padding:12px;background:#211b24;color:#f6ecf7;border-radius:8px;white-space:pre-wrap;overflow:auto;font:10px/1.6 var(--mono)}.code.open{display:block}
+.footer{border-top:1px solid var(--line);padding:22px 0 0;color:#948a95;font:10px var(--mono);display:flex;justify-content:space-between;gap:16px}
+@media(max-width:1050px){main{padding:0 28px 60px}.icon-grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:760px){.sidebar{transform:translateX(-100%);transition:transform .25s}.sidebar.open{transform:translateX(0)}main{margin-left:0;padding:0 18px 50px}.mobile-menu{display:block}.topbar{height:60px;margin-bottom:28px}.page-intro{align-items:flex-start}.intro-mark{width:65px;height:65px;border-radius:18px}.intro-mark svg{width:35px;height:35px}h1{font-size:32px}.component-grid{grid-template-columns:1fr}.icon-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:430px){.page-intro{gap:10px}.intro-mark{display:none}.section-head{align-items:flex-start}.count{display:none}.topbar{margin-bottom:24px}.color-note{width:100%;margin:4px 0 0}}
 </style>
 </head>
 <body>
-<div class="app">
 <aside class="sidebar" id="sidebar">
-  <div class="brand"><div class="brand-wordmark" aria-label="Swapp" style="font:900 34px Nunito,sans-serif;letter-spacing:-.08em;color:#ff7b0d">swapp<span style="color:#fff">!</span></div><div><small>DESIGN SYSTEM</small></div></div>
-  <nav class="nav">
-    <div class="nav-label">Comece aqui</div>
-    <a href="#overview" class="active"><span class="nav-icon">✳</span> Visão geral</a>
-    <a href="#principles"><span class="nav-icon">〰</span> Princípios</a>
-    <div class="nav-label">Fundamentos</div>
-    <a href="#colors"><span class="nav-icon">◉</span> Cores</a>
-    <a href="#typography"><span class="nav-icon">Aa</span> Tipografia</a>
-    <a href="#spacing"><span class="nav-icon">↔</span> Espaçamento e grid</a>
-    <a href="#shape"><span class="nav-icon">◒</span> Forma e elevação</a>
-    <div class="nav-label">Biblioteca</div>
-    <a href="#components"><span class="nav-icon">▣</span> Componentes</a>
-    <a href="#icons"><span class="nav-icon">✎</span> Ícones e ilustrações</a>
-    <a href="#screens"><span class="nav-icon">▤</span> Telas do produto</a>
-    <div class="nav-label">Recursos</div>
-    <a href="#guidelines"><span class="nav-icon">⌁</span> Diretrizes</a>
+  <div class="brand-panel"><img src="assets/swapp-logo.png" alt="Logo original Swapp"></div>
+  <div class="brand-caption">Biblioteca de componentes · v0.2</div>
+  <nav class="nav" aria-label="Navegação da documentação">
+    <div class="nav-label">Componentes</div>
+    <a class="active" href="#buttons"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="5"/></svg> Botões e ações</a>
+    <a href="#fields"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 10h10M7 14h6"/></svg> Campos e formulários</a>
+    <a href="#navigation"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg> Navegação e listas</a>
+    <a href="#profile"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c.7-4 3.4-6 8-6s7.3 2 8 6"/></svg> Perfil e indicadores</a>
+    <a href="#payment"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg> Pagamento</a>
+    <a href="#calculator"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2"/></svg> Teclado e calculadora</a>
+    <a href="#icons"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg> Ícones</a>
   </nav>
-  <div class="sidebar-foot">SWAPP DS · CONCEITO 01<br>Construído a partir dos projetos originais</div>
+  <div class="side-note">Referências: os oito projetos originais do Swapp, exportados do CodePen. O que já existia e as sugestões de evolução estão identificados separadamente.</div>
 </aside>
 <main>
-  <div class="topbar"><div style="display:flex;align-items:center;gap:13px"><button class="mobile-menu" id="menuBtn">☰</button><span class="crumb">SWAPP / DESIGN SYSTEM</span></div><span class="version">FOUNDATION · V0.1</span></div>
-  <section class="hero section" id="overview">
-    <div><div class="eyebrow">Uma linguagem, muitas possibilidades</div><h1>Design that<br><span>moves.</span></h1><p>O sistema visual do Swapp. Uma base viva para criar experiências digitais simples, expressivas e reconhecíveis — com personalidade em cada detalhe.</p><div class="actions"><a class="btn primary" href="#components" style="text-decoration:none">Explorar componentes ↗</a><a class="btn secondary" href="#screens" style="text-decoration:none">Ver telas do produto</a></div></div>
-    <div class="hero-art"><span class="doodle d1">✳</span><span class="hero-mark">swapp!</span><span class="doodle d2">〰</span></div>
-  </section>
-  <section class="section" id="principles"><div class="eyebrow">01 / Direção</div><h2>Personalidade com propósito.</h2><p class="lead">O Swapp combina energia, proximidade e clareza. A evolução visual mantém o espírito lúdico da marca original, mas organiza a experiência com mais consistência e maturidade.</p>
-    <div class="grid">
-      <div class="card"><div class="stat">01</div><h3>Expressivo</h3><p class="stat-label">Cor, curvas e ícones desenhados dão ao produto uma assinatura própria.</p></div>
-      <div class="card"><div class="stat">02</div><h3>Direto</h3><p class="stat-label">Interfaces objetivas, hierarquia clara e ações fáceis de reconhecer.</p></div>
-      <div class="card"><div class="stat">03</div><h3>Humano</h3><p class="stat-label">Uma experiência acolhedora, sem perder precisão ou eficiência.</p></div>
+  <header class="topbar">
+    <div style="display:flex;align-items:center;gap:12px"><button class="mobile-menu" id="menuBtn" aria-label="Abrir navegação">☰</button><span class="crumb">SWAPP / DESIGN SYSTEM / COMPONENTES</span></div>
+    <span class="version">COMPONENT LIBRARY · 0.2</span>
+  </header>
+  <div class="page-intro">
+    <div><p class="kicker">Biblioteca · base original + evolução</p><h1>Componentes</h1><p>Peças reutilizáveis da interface Swapp, organizadas a partir dos projetos originais. Cada exemplo preserva a linguagem visual de origem e aponta evoluções possíveis sem substituir a identidade da marca.</p>
+      <div class="color-strip" aria-label="Cores principais"><i class="color-chip" style="background:#ffa84c"></i><i class="color-chip" style="background:#ff7b0d"></i><i class="color-chip" style="background:#ff7f13"></i><i class="color-chip" style="background:#c40bd5"></i><i class="color-chip" style="background:#ea00ff"></i><i class="color-chip" style="background:#3a589a"></i><i class="color-chip" style="background:#e19c8a"></i><span class="color-note">Paleta extraída dos CSS originais</span></div>
+    </div>
+    <div class="intro-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 17.5c0-4.1 3.3-7.5 7.5-7.5h17a7.5 7.5 0 0 1 0 15h-17a7.5 7.5 0 0 0 0 15h17c4.1 0 7.5-3.3 7.5-7.5"/><path d="M17 6v7M31 35v7"/></svg></div>
+  </div>
+
+  <section class="section" id="buttons">
+    <div class="section-head"><div><div class="section-index">01 / AÇÕES</div><h2>Botões e ações</h2><p class="section-desc">A ação principal aparece em magenta nos fluxos de cadastro, checkout e calculadora. O laranja aparece como alternativa em contextos de marca e na tela 404.</p></div><span class="count">4 VARIAÇÕES</span></div>
+    <div class="component-grid">
+      <article class="component-card"><div class="component-top"><h3>Botão principal</h3><span class="source-tag">Sign Up · Checkout</span></div><div class="preview warm"><button class="ui-btn">Start swapping</button><button class="ui-btn" disabled>Indisponível</button></div><div class="spec-row"><span>44 px altura</span><span>50 px radius</span><span>#C40BD5</span><span>hover #EA00FF</span></div><div class="evolution"><strong>Evolução sugerida:</strong> manter o pill e o magenta. Padronizar larguras responsivas e explicitar estados de carregamento, foco por teclado e desabilitado.</div><button class="code-toggle" type="button">Ver CSS de referência ↗</button><pre class="code">background: #c40bd5;
+color: #fff;
+height: 44px;
+border: 0;
+border-radius: 50px;
+font-family: 'Averia Sans Libre';
+font-size: 15px;
+text-transform: uppercase;</pre></article>
+      <article class="component-card"><div class="component-top"><h3>Botão de marca</h3><span class="source-tag">Landing Page · 404</span></div><div class="preview gradient"><button class="ui-btn orange">Get it on Google Play</button></div><div class="spec-row"><span>44 px altura</span><span>50 px radius</span><span>#FF7B0D</span><span>hover #FFA84C</span></div><div class="evolution"><strong>Evolução sugerida:</strong> reservar o laranja para ações contextuais de marca e manter o magenta como CTA principal dos fluxos transacionais.</div><button class="code-toggle" type="button">Ver CSS de referência ↗</button><pre class="code">background-color: #ff7b0d;
+color: #fff;
+height: 44px;
+border-radius: 50px;
+transition: .3s ease-in-out;</pre></article>
+      <article class="component-card"><div class="component-top"><h3>Botão social</h3><span class="source-tag">Sign Up</span></div><div class="preview warm"><button class="ui-social"><svg viewBox="0 0 24 24"><path d="M15 21v-7h2.5l.4-3H15V9.1c0-.9.3-1.5 1.6-1.5H18V4.9c-.6-.1-1.4-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3V11H8.8v3h2.5v7H15z"/></svg>Sign up with Facebook</button></div><div class="spec-row"><span>50 px altura</span><span>8 px radius</span><span>#3A589A</span><span>hover #4E6DB2</span></div><div class="evolution"><strong>Evolução sugerida:</strong> preservar a assinatura azul, mas tratar o botão como opção secundária e informar claramente qual conta será conectada.</div></article>
+      <article class="component-card"><div class="component-top"><h3>Botão de ícone</h3><span class="source-tag">User Profile</span></div><div class="preview warm"><button class="ui-icon-btn" aria-label="Favoritar"><svg viewBox="0 0 24 24"><path d="M20.8 8.7c0 5.1-8.8 10.2-8.8 10.2S3.2 13.8 3.2 8.7A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/></svg></button><button class="ui-icon-btn" aria-label="Trocar"><svg viewBox="0 0 24 24"><path d="M4 7h14l-3-3M20 17H6l3 3"/></svg></button><button class="ui-icon-btn" aria-label="Editar"><svg viewBox="0 0 24 24"><path d="m4 16.5-.8 4.3 4.3-.8L19 8.5 15.5 5 4 16.5Z"/><path d="m13.8 6.7 3.5 3.5"/></svg></button></div><div class="spec-row"><span>42–44 px</span><span>50% radius</span><span>ícone centralizado</span></div><div class="evolution"><strong>Evolução sugerida:</strong> definir tamanho mínimo de toque de 44 px, tooltip ou rótulo acessível e estados selecionado/pressionado.</div></article>
     </div>
   </section>
-  <section class="section" id="colors"><div class="eyebrow">02 / Fundamentos</div><h2>Uma paleta cheia de energia.</h2><p class="lead">As cores foram extraídas dos projetos originais do Swapp e reorganizadas em papéis mais claros. O laranja lidera a ação; o magenta entra como acento expressivo; tons neutros dão equilíbrio e legibilidade.</p>
-    <div class="color-grid">
-      <div class="color-card"><div class="swatch" style="background:#ff7b0d">#FF7B0D</div><div class="token-name">Swapp Orange</div><div class="token-meta">brand / primary</div></div>
-      <div class="color-card"><div class="swatch" style="background:#ffa84c">#FFA84C</div><div class="token-name">Tangerine</div><div class="token-meta">brand / light</div></div>
-      <div class="color-card"><div class="swatch" style="background:#c40bd5">#C40BD5</div><div class="token-name">Electric Plum</div><div class="token-meta">accent / primary</div></div>
-      <div class="color-card"><div class="swatch" style="background:#ea00ff">#EA00FF</div><div class="token-name">Neon Orchid</div><div class="token-meta">accent / highlight</div></div>
-      <div class="color-card"><div class="swatch" style="background:#e19c8a">#E19C8A</div><div class="token-name">Soft Coral</div><div class="token-meta">support / warm</div></div>
-      <div class="color-card"><div class="swatch" style="background:#3a589a">#3A589A</div><div class="token-name">Social Blue</div><div class="token-meta">semantic / social</div></div>
-      <div class="color-card"><div class="swatch" style="background:#211b24">#211B24</div><div class="token-name">Ink</div><div class="token-meta">neutral / strong</div></div>
-      <div class="color-card"><div class="swatch" style="background:#fbf9f7;color:#766d79;border:1px solid #eee8e5">#FBF9F7</div><div class="token-name">Warm Paper</div><div class="token-meta">surface / base</div></div>
-    </div>
-    <div class="callout"><strong>Nota de evolução:</strong> a paleta original tinha gradientes fortes em quase todas as telas. Nesta proposta, os gradientes passam a ser recursos de destaque; superfícies e áreas de leitura usam tons mais calmos.</div>
-  </section>
-  <section class="section" id="typography"><div class="eyebrow">03 / Fundamentos</div><h2>Tipografia com voz própria.</h2><p class="lead">Uma combinação de display arredondada para títulos, sans-serif funcional para leitura e mono para metadados e especificações.</p>
-    <div class="type-sample"><div class="type-display">Trocar. Conectar. Seguir.</div><div class="type-meta">NUNITO EXTRA BOLD · DISPLAY / 44 PX</div></div>
-    <div class="type-sample"><div class="type-body">Experiências simples aproximam pessoas e tornam cada troca mais fácil. A interface deve ajudar a entender o que está acontecendo e qual é o próximo passo.</div><div class="type-meta">DM SANS · BODY / 15 PX · LINE HEIGHT 1.6</div></div>
-    <div class="type-sample"><div class="type-mono">COLOR.PRIMARY.500&nbsp;&nbsp; #FF7B0D</div><div class="type-meta">DM MONO · LABEL / TOKEN / CODE</div></div>
-  </section>
-  <section class="section" id="spacing"><div class="eyebrow">04 / Fundamentos</div><h2>Ritmo e espaçamento.</h2><p class="lead">Uma escala baseada em múltiplos de 4 ajuda a criar ritmo consistente entre elementos, componentes e páginas.</p>
-    <div class="card">
-      <div style="display:grid;gap:12px">
-        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">04</span><div style="height:10px;width:16px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">4 px · micro</span></div>
-        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">08</span><div style="height:10px;width:32px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">8 px · compact</span></div>
-        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">12</span><div style="height:10px;width:48px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">12 px · tight</span></div>
-        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">16</span><div style="height:10px;width:64px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">16 px · default</span></div>
-        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">24</span><div style="height:10px;width:96px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">24 px · relaxed</span></div>
-        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">32</span><div style="height:10px;width:128px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">32 px · section</span></div>
-        <div style="display:flex;align-items:center;gap:14px"><span class="token-meta" style="width:50px">48</span><div style="height:10px;width:192px;background:#ff7b0d;border-radius:4px"></div><span class="token-meta">48 px · layout</span></div>
-      </div>
+
+  <section class="section" id="fields">
+    <div class="section-head"><div><div class="section-index">02 / ENTRADA DE DADOS</div><h2>Campos e formulários</h2><p class="section-desc">Os originais usam campos em formato pill, contorno laranja e tipografia Averia Sans Libre. A evolução adiciona rótulos, foco consistente e mensagens de validação.</p></div><span class="count">3 VARIAÇÕES</span></div>
+    <div class="component-grid">
+      <article class="component-card"><div class="component-top"><h3>Campo de texto</h3><span class="source-tag">Sign Up · Checkout</span></div><div class="preview warm"><div class="form-demo"><label class="field-label" for="nickname">Nickname</label><input class="ui-field" id="nickname" placeholder="Seu nome de usuário"><input class="ui-field" placeholder="City · San Francisco" aria-label="Cidade"></div></div><div class="spec-row"><span>pill 50 px</span><span>borda #FFA200</span><span>focus magenta</span></div><div class="evolution"><strong>Evolução sugerida:</strong> adotar rótulo persistente, texto de ajuda e mensagens de erro; não depender apenas do placeholder para identificar o campo.</div><button class="code-toggle" type="button">Ver CSS de referência ↗</button><pre class="code">width: 170px;
+height: 24px;
+padding: 10px 15px;
+border: 1px solid #ffa200;
+border-radius: 50px;
+font: 15px 'Averia Sans Libre';</pre></article>
+      <article class="component-card"><div class="component-top"><h3>Campo de senha</h3><span class="source-tag">Sign Up</span></div><div class="preview warm"><div class="form-demo"><label class="field-label" for="password">Password</label><div class="field-wrap"><input class="ui-field" id="password" type="password" value="swapp1234"><button class="field-action" id="showPass" aria-label="Mostrar senha"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg></button></div><span class="field-help" style="color:#817782">Use pelo menos 8 caracteres.</span></div></div><div class="spec-row"><span>mesma base do text field</span><span>controle de visibilidade</span></div><div class="evolution"><strong>Evolução sugerida:</strong> acrescentar mostrar/ocultar senha, critérios de segurança e validação sem alterar o formato arredondado.</div></article>
+      <article class="component-card"><div class="component-top"><h3>Campo com erro</h3><span class="source-tag">Evolução do formulário</span></div><div class="preview warm"><div class="form-demo"><label class="field-label" for="email">E-mail</label><input id="email" class="ui-field error" value="nick@" aria-invalid="true"><span class="field-help">Confira o endereço de e-mail.</span></div></div><div class="spec-row"><span>estado default</span><span>focus</span><span>error</span><span>disabled</span></div><div class="evolution"><strong>Evolução sugerida:</strong> documentar os estados do componente com cor, texto e feedback visual. Para acessibilidade, associar a mensagem ao campo.</div></article>
     </div>
   </section>
-  <section class="section" id="shape"><div class="eyebrow">05 / Fundamentos</div><h2>Formas amigáveis. Estrutura sólida.</h2><p class="lead">Cantos arredondados e superfícies suaves preservam a proximidade da marca. A elevação deve ser discreta e ajudar a entender a hierarquia.</p>
-    <div class="radius-grid">
-      <div class="radius-card"><div class="radius-shape" style="border-radius:6px"></div><div class="token-name">Small · 6 px</div></div>
-      <div class="radius-card"><div class="radius-shape" style="border-radius:12px"></div><div class="token-name">Medium · 12 px</div></div>
-      <div class="radius-card"><div class="radius-shape" style="border-radius:18px"></div><div class="token-name">Large · 18 px</div></div>
-      <div class="radius-card"><div class="radius-shape" style="border-radius:999px"></div><div class="token-name">Pill · 999 px</div></div>
+
+  <section class="section" id="navigation">
+    <div class="section-head"><div><div class="section-index">03 / ESTRUTURA</div><h2>Navegação e listas</h2><p class="section-desc">O mesmo cabeçalho e os mesmos padrões de linha se repetem em Perfil, Settings, Calculator e Checkout.</p></div><span class="count">3 COMPONENTES</span></div>
+    <div class="component-grid">
+      <article class="component-card"><div class="component-top"><h3>Barra superior</h3><span class="source-tag">Profile · Settings · Checkout</span></div><div class="preview warm"><div class="mini-screen"><div class="mini-top"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg><strong>Settings</strong><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 2h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 3h4l.5-3a7 7 0 0 0 2.6-1.5l2.4 1 2-3.5-2-1.5Z"/></svg></div></div></div><div class="spec-row"><span>50 px original</span><span>#FF7F13</span><span>radius 8 px</span></div><div class="evolution"><strong>Evolução sugerida:</strong> manter a faixa laranja e padronizar altura, área de toque e comportamento responsivo do menu e da ação à direita.</div></article>
+      <article class="component-card"><div class="component-top"><h3>Linha de configuração</h3><span class="source-tag">Settings</span></div><div class="preview gradient"><div class="mini-screen"><div class="mini-top"><strong>Settings</strong><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 2h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 3h4l.5-3a7 7 0 0 0 2.6-1.5l2.4 1 2-3.5-2-1.5Z"/></svg></div><div class="settings-row"><span>Profile</span><span class="settings-action">Edit&nbsp; ›</span></div><div class="settings-row"><span>Facebook</span><span class="settings-action">Connect&nbsp; ›</span></div><div class="settings-row"><span>Notification</span><label class="toggle" aria-label="Ativar notificações"><input type="checkbox" checked><span class="track"></span></label></div><div class="settings-row"><span>Session</span><span class="settings-action">Logout&nbsp; ›</span></div></div></div><div class="spec-row"><span>linha 40 px no original</span><span>ícone + label + ação</span></div><div class="evolution"><strong>Evolução sugerida:</strong> transformar a linha em componente clicável com variantes para link, ação, toggle e item desabilitado; preservar a leitura simples.</div></article>
+      <article class="component-card"><div class="component-top"><h3>Toggle / switch</h3><span class="source-tag">Settings</span></div><div class="preview warm"><label class="toggle"><input type="checkbox" checked><span class="track"></span> Notification on</label><label class="toggle"><input type="checkbox"><span class="track"></span> Notification off</label></div><div class="spec-row"><span>40 × 18 px original</span><span>evolução 42 × 22 px</span><span>thumb 16 px</span></div><div class="evolution"><strong>Evolução sugerida:</strong> manter o gesto e o contraste laranja/branco. Aumentar a área clicável ao redor do switch e permitir foco pelo teclado.</div><button class="code-toggle" type="button">Ver CSS de referência ↗</button><pre class="code">width: 40px;
+height: 18px;
+background: #ccc;
+/* thumb */
+width: 14px;
+height: 14px;
+background: #ff7f13;</pre></article>
     </div>
-    <div class="demo-panel"><div class="demo-head"><strong>Elevação padrão</strong><span class="demo-label">SHADOW / 01</span></div><div class="shadow-demo"></div><div class="token-meta">0 14px 40px · rgba(45,25,38,.08)</div></div>
   </section>
-  <section class="section" id="components"><div class="eyebrow">06 / Biblioteca</div><h2>Componentes em contexto.</h2><p class="lead">Elementos básicos com estados e variações. Esta primeira versão apresenta uma base visual para evoluir conforme os fluxos reais do aplicativo forem detalhados.</p>
-    <div class="demo-panel"><div class="demo-head"><strong>Botões</strong><span class="demo-label">BUTTON / VARIANTS</span></div><div class="component-row"><button class="btn primary">Começar agora ↗</button><button class="btn secondary">Saiba mais</button><button class="btn" style="background:#fce9fc;color:#a509ae">Ação alternativa</button><button class="btn" disabled style="background:#eee;color:#aaa">Indisponível</button></div></div>
-    <div class="demo-panel"><div class="demo-head"><strong>Campos e seleção</strong><span class="demo-label">INPUT / SELECT</span></div><div class="component-row"><input class="field" placeholder="Seu nome"><select class="field"><option>Escolha uma cidade</option><option>São Paulo</option><option>Campinas</option></select></div></div>
-    <div class="demo-panel"><div class="demo-head"><strong>Status e etiquetas</strong><span class="demo-label">BADGE / STATUS</span></div><div class="component-row"><span class="pill">Disponível</span><span class="pill pink">Novo</span><span class="pill green">Concluído</span></div></div>
-    <div class="demo-panel"><div class="demo-head"><strong>Interação de abas</strong><span class="demo-label">TABS / INTERACTIVE</span></div><div class="tabs"><button class="active" data-tab="resumo">Resumo</button><button data-tab="atividade">Atividade</button><button data-tab="detalhes">Detalhes</button></div><div id="tabContent" style="color:var(--muted);font-size:13px">Visão rápida das informações principais do item.</div></div>
+
+  <section class="section" id="profile">
+    <div class="section-head"><div><div class="section-index">04 / CONTA</div><h2>Perfil e indicadores</h2><p class="section-desc">A área de perfil introduz avatar circular, nome e localização, contadores em pílula e atalhos redondos de ação.</p></div><span class="count">3 ELEMENTOS</span></div>
+    <div class="component-grid">
+      <article class="component-card"><div class="component-top"><h3>Resumo de perfil</h3><span class="source-tag">User Profile</span></div><div class="preview gradient"><div class="profile-demo"><div class="avatar">SM</div><h4>Sophia M.</h4><p>San Francisco, CA</p><div class="profile-stats"><span class="profile-stat">5 itens</span><span class="profile-stat">3 swapps</span></div><div class="profile-actions"><button class="ui-icon-btn" aria-label="Editar perfil"><svg viewBox="0 0 24 24"><path d="m4 16.5-.8 4.3 4.3-.8L19 8.5 15.5 5 4 16.5Z"/></svg></button><button class="ui-icon-btn" aria-label="Compartilhar perfil"><svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.7 10.6 6.6-4.2M8.7 13.4l6.6 4.2"/></svg></button></div></div></div><div class="spec-row"><span>avatar 90 px original</span><span>nome 24 px original</span><span>ações circulares</span></div><div class="evolution"><strong>Evolução sugerida:</strong> preservar avatar redondo e destaque laranja; separar estatísticas do nome e prever avatar sem foto, edição e carregamento.</div></article>
+      <article class="component-card"><div class="component-top"><h3>Badge / contador</h3><span class="source-tag">User Profile · Settings</span></div><div class="preview warm"><span class="badge">10</span><span class="badge">0</span><span class="badge">5 itens</span><span class="badge">3 swapps</span></div><div class="spec-row"><span>fundo branco</span><span>texto #E19C8A</span><span>formato pill</span></div><div class="evolution"><strong>Evolução sugerida:</strong> definir tamanhos compacto e padrão, largura mínima para números e variantes semânticas para contagem, novidade e status.</div></article>
+      <article class="component-card"><div class="component-top"><h3>Atalhos do perfil</h3><span class="source-tag">User Profile</span></div><div class="preview warm"><div style="display:flex;gap:15px;align-items:center"><div style="text-align:center"><button class="ui-icon-btn" aria-label="Meus desejos"><svg viewBox="0 0 24 24"><path d="M20.8 8.7c0 5.1-8.8 10.2-8.8 10.2S3.2 13.8 3.2 8.7A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/></svg></button><div style="font:10px var(--mono);color:#8a808b;margin-top:7px">My wishes</div></div><div style="text-align:center"><button class="ui-icon-btn" aria-label="Buscas salvas"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button><div style="font:10px var(--mono);color:#8a808b;margin-top:7px">Saved searchs</div></div></div></div><div class="spec-row"><span>círculo magenta</span><span>ícone branco</span><span>hover #EA00FF</span></div><div class="evolution"><strong>Evolução sugerida:</strong> adicionar rótulo legível próximo ao ícone e tornar visível o estado ativo, sem depender apenas da cor.</div></article>
+    </div>
   </section>
-  <section class="section" id="icons"><div class="eyebrow">07 / Linguagem gráfica</div><h2>Ícones com traço e atitude.</h2><p class="lead">O logo tem desenho orgânico, contorno expressivo e movimento. Os ícones devem seguir essa linguagem: formas simples, traço arredondado e personalidade — sem competir com a informação.</p>
+
+  <section class="section" id="payment">
+    <div class="section-head"><div><div class="section-index">05 / PAGAMENTO</div><h2>Pagamento</h2><p class="section-desc">O checkout original reúne campos de cartão, identificação da bandeira, opção de salvar o cartão e ação final.</p></div><span class="count">2 COMPONENTES</span></div>
+    <div class="component-grid">
+      <article class="component-card"><div class="component-top"><h3>Formulário de cartão</h3><span class="source-tag">Credit Card Checkout</span></div><div class="preview gradient"><div class="pay-card"><div class="pay-title"><span>Payment details</span><svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 9h18M7 15h4"/></svg></div><input class="ui-field" placeholder="Card holder" aria-label="Titular do cartão"><input class="ui-field" placeholder="Card number  ••••  ••••  ••••  4242" aria-label="Número do cartão"><div class="pay-meta"><input class="ui-field" placeholder="MM / YY" aria-label="Validade"><input class="ui-field" placeholder="CVC" aria-label="CVC"></div><div class="pay-foot"><label class="checkbox" style="color:#fff"><input type="checkbox" checked> Save this card</label><span>VISA</span></div></div></div><div class="spec-row"><span>campos pill</span><span>ícone/bandeira</span><span>ação checkout</span></div><div class="evolution"><strong>Evolução sugerida:</strong> agrupar número, validade e CVC por hierarquia; mostrar marca do cartão detectada e explicar como os dados serão usados. O exemplo é visual, não processa pagamentos.</div></article>
+      <article class="component-card"><div class="component-top"><h3>Checkbox</h3><span class="source-tag">Credit Card Checkout</span></div><div class="preview warm"><label class="checkbox"><input type="checkbox" checked> Save this card</label><label class="checkbox"><input type="checkbox"> I agree with the terms</label></div><div class="spec-row"><span>16 px original</span><span>borda laranja</span><span>seleção magenta proposta</span></div><div class="evolution"><strong>Evolução sugerida:</strong> manter o controle simples e garantir que o rótulo inteiro seja clicável, com foco visível e texto claro sobre consentimento.</div></article>
+    </div>
+  </section>
+
+  <section class="section" id="calculator">
+    <div class="section-head"><div><div class="section-index">06 / CONTROLES</div><h2>Teclado e calculadora</h2><p class="section-desc">A calculadora fornece uma família de botões circulares: teclas numéricas brancas e teclas de operação magenta.</p></div><span class="count">TECLAS INTERATIVAS</span></div>
+    <div class="component-grid">
+      <article class="component-card"><div class="component-top"><h3>Teclado numérico</h3><span class="source-tag">Calculator</span></div><div class="preview gradient"><div class="calc"><div class="calc-display" id="calcDisplay">0</div><div class="calc-keys"><button class="calc-key" data-key="7">7</button><button class="calc-key" data-key="8">8</button><button class="calc-key" data-key="9">9</button><button class="calc-key operator" data-key="÷">÷</button><button class="calc-key" data-key="4">4</button><button class="calc-key" data-key="5">5</button><button class="calc-key" data-key="6">6</button><button class="calc-key operator" data-key="×">×</button><button class="calc-key" data-key="1">1</button><button class="calc-key" data-key="2">2</button><button class="calc-key" data-key="3">3</button><button class="calc-key operator" data-key="−">−</button><button class="calc-key wide" data-key="0">0</button><button class="calc-key" data-key=".">.</button><button class="calc-key operator" data-key="+">+</button><button class="calc-key operator" data-key="=">=</button></div></div></div><div class="spec-row"><span>45 × 45 px original</span><span>raio 50%</span><span>numérica branca</span><span>operação magenta</span></div><div class="evolution"><strong>Evolução sugerida:</strong> padronizar tamanho das teclas, área de toque e estados pressionado/foco. O pequeno exemplo acima permite testar o comportamento visual.</div></article>
+      <article class="component-card"><div class="component-top"><h3>Família de teclas</h3><span class="source-tag">Calculator</span></div><div class="preview warm"><button class="calc-key" style="width:45px;height:45px">8</button><button class="calc-key operator" style="width:45px;height:45px">+</button><button class="calc-key" style="width:96px;height:45px;border-radius:40px;text-align:left;padding-left:15px">0</button></div><div class="spec-row"><span>key / number</span><span>key / operator</span><span>key / double-width</span></div><div class="evolution"><strong>Evolução sugerida:</strong> documentar tecla de número, operador, zero largo e estado de tecla ativa como variantes do mesmo componente.</div></article>
+    </div>
+  </section>
+
+  <section class="section" id="icons">
+    <div class="section-head"><div><div class="section-index">07 / LINGUAGEM VISUAL</div><h2>Ícones</h2><p class="section-desc">A família abaixo representa as ações que aparecem nos projetos: gostar, trocar, buscar, editar, perfil, configurações e pagamento. O desenho é linear, simples e legível em tamanhos pequenos.</p></div><span class="count">8 ÍCONES-BASE</span></div>
     <div class="icon-grid">
-      <div class="icon-card"><div class="icon-doodle">↗</div><div class="icon-caption">EXPLORE</div></div>
-      <div class="icon-card"><div class="icon-doodle">♡</div><div class="icon-caption">FAVORITE</div></div>
-      <div class="icon-card"><div class="icon-doodle">⌁</div><div class="icon-caption">SWAP</div></div>
-      <div class="icon-card"><div class="icon-doodle">✳</div><div class="icon-caption">DISCOVER</div></div>
-      <div class="icon-card"><div class="icon-doodle">☺</div><div class="icon-caption">PROFILE</div></div>
-      <div class="icon-card"><div class="icon-doodle">＋</div><div class="icon-caption">ADD</div></div>
+      <div class="icon-item"><svg viewBox="0 0 24 24"><path d="M20.8 8.7c0 5.1-8.8 10.2-8.8 10.2S3.2 13.8 3.2 8.7A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/></svg><span>Like</span></div>
+      <div class="icon-item"><svg viewBox="0 0 24 24"><path d="M4 7h14l-3-3M20 17H6l3 3"/></svg><span>Swapp</span></div>
+      <div class="icon-item"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><span>Search</span></div>
+      <div class="icon-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c.7-4 3.4-6 8-6s7.3 2 8 6"/></svg><span>Profile</span></div>
+      <div class="icon-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 2h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 3h4l.5-3a7 7 0 0 0 2.6-1.5l2.4 1 2-3.5-2-1.5Z"/></svg><span>Settings</span></div>
+      <div class="icon-item"><svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 9h18M7 15h4"/></svg><span>Payment</span></div>
+      <div class="icon-item"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2"/></svg><span>Calculator</span></div>
+      <div class="icon-item"><svg viewBox="0 0 24 24"><path d="m4 16.5-.8 4.3 4.3-.8L19 8.5 15.5 5 4 16.5Z"/><path d="m13.8 6.7 3.5 3.5"/></svg><span>Edit</span></div>
     </div>
-    <div class="callout"><strong>Direção de arte:</strong> estes glifos são placeholders para demonstrar o peso e o espírito visual. A biblioteca final deve usar ícones vetoriais originais, desenhados com terminais arredondados e um leve caráter artesanal.</div>
+    <div class="note-panel"><strong>Nota sobre os ícones:</strong> estes exemplos organizam uma família coerente para documentar os usos observados. Não substituem nem alteram o logo original Swapp, que permanece como o arquivo de marca fornecido.</div>
   </section>
-  <section class="section" id="screens"><div class="eyebrow">08 / Produto</div><h2>Telas que deram origem ao sistema.</h2><p class="lead">Os projetos enviados foram agrupados como referências de produto. Os previews abaixo são representações esquemáticas para documentar a família de telas — não capturas pixel a pixel dos Pens originais.</p>
-    <div class="screen-grid" id="screenGrid"></div>
-  </section>
-  <section class="section" id="guidelines"><div class="eyebrow">09 / Diretrizes</div><h2>Consistência em cada troca.</h2><p class="lead">O sistema deve facilitar decisões e acelerar novas telas sem apagar a personalidade do Swapp.</p>
-    <div class="grid">
-      <div class="card"><h3>Use cor com intenção</h3><p class="stat-label">Laranja para ações primárias; magenta para acentos; neutros para leitura e estrutura.</p></div>
-      <div class="card"><h3>Priorize a clareza</h3><p class="stat-label">Uma ação principal por contexto. Rótulos curtos, linguagem direta e estados visíveis.</p></div>
-      <div class="card"><h3>Desenhe para mobile</h3><p class="stat-label">Os layouts devem começar pelo uso em telas pequenas e expandir com consistência.</p></div>
-    </div>
-    <div class="callout"><strong>Próxima etapa recomendada:</strong> validar esta direção com as telas originais completas, fechar os tokens definitivos e transformar os padrões recorrentes em componentes documentados com estados, medidas e regras de uso.</div>
-  </section>
-  <footer class="footer"><span>SWAPP DESIGN SYSTEM · CONCEITO 01</span><span>Uma base viva para experiências melhores.</span></footer>
+
+  <div class="footer"><span>SWAPP DESIGN SYSTEM · COMPONENT LIBRARY</span><span>Baseado nos projetos originais · proposta de evolução 0.2</span></div>
 </main>
-</div>
 <script>
-const screens=[
-["Landing Page","Apresentação da proposta e chamada para ação.","WEvoby","landing-page"],
-["Sign Up","Entrada simples com cadastro e acesso social.","GvRbPp","sign-up"],
-["User Profile","Perfil, identidade e informações do usuário.","yoOoEg","user-profile"],
-["Settings","Preferências e configurações da conta.","GvqqBy","settings"],
-["Calculator","Ferramenta de cálculo com interação direta.","Xamrer","calculator"],
-["Credit Card Checkout","Fluxo de pagamento e confirmação.","gxbBwv","credit-card-checkout"],
-["App Icon","Símbolo visual para o aplicativo.","MvaGzV","app-icon"],
-["404 Page","Estado vazio e recuperação de navegação.","BdzgJm","404-page"]
-];
-const grid=document.getElementById('screenGrid');
-grid.innerHTML=screens.map((s,i)=>`<article class="screen-card"><div class="screen-thumb"><div class="phone"><div class="phone-top"></div><div class="phone-logo">swapp!</div>${i===1?'<div class="mini-line wide"></div><div class="mini-line mid"></div><div class="mini-line wide"></div><div class="mini-btn">START SWAPPING</div>':i===2?'<div style="height:36px;width:36px;border-radius:50%;background:#ffe0c2;margin:8px auto"></div><div class="mini-line mid" style="margin:auto"></div><div class="mini-line wide"></div><div class="mini-line wide"></div>':i===3?'<div class="mini-line wide"></div><div class="mini-line mid"></div><div class="mini-line wide"></div><div class="mini-line short"></div>':i===4?'<div style="font:22px Nunito;color:#ff7b0d;text-align:right;margin:20px 0">128</div><div class="mini-line wide"></div><div class="mini-line wide"></div><div class="mini-line wide"></div>':i===5?'<div class="mini-line wide"></div><div class="mini-line mid"></div><div style="height:35px;border:1px solid #eee;border-radius:6px;margin:10px 0"></div><div class="mini-btn">PAY NOW</div>':i===6?'<div style="font:42px Nunito;color:#ff7b0d;text-align:center;margin:36px 0">S</div>':i===7?'<div style="font:28px Nunito;color:#ff7b0d;text-align:center;margin:35px 0">404</div><div class="mini-line mid" style="margin:auto"></div>':'<div class="mini-line wide"></div><div class="mini-line mid"></div><div class="mini-btn">DISCOVER SWAPP</div>'}</div></div><div class="screen-title">${s[0]}</div><div class="screen-desc">${s[1]}</div><a class="screen-link" href="https://codepen.io/andrade_nicko/pen/${s[2]}" target="_blank" rel="noreferrer">Abrir projeto original ↗</a></article>`).join('');
-document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));b.classList.add('active');const content={resumo:'Visão rápida das informações principais do item.',atividade:'Histórico de ações e atualizações recentes.',detalhes:'Dados completos, preferências e informações adicionais.'};document.getElementById('tabContent').textContent=content[b.dataset.tab]}));
-const links=[...document.querySelectorAll('.nav a')];const sections=links.map(a=>document.querySelector(a.getAttribute('href')));const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-25% 0px -65% 0px'});sections.forEach(s=>s&&observer.observe(s));
-document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('sidebar').classList.toggle('open'));links.forEach(a=>a.addEventListener('click',()=>document.getElementById('sidebar').classList.remove('open')));
+const sidebar=document.getElementById('sidebar');
+document.getElementById('menuBtn').addEventListener('click',()=>sidebar.classList.toggle('open'));
+document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('active'));a.classList.add('active');sidebar.classList.remove('open')}));
+document.querySelectorAll('.code-toggle').forEach(btn=>btn.addEventListener('click',()=>{const code=btn.nextElementSibling;code.classList.toggle('open');btn.textContent=code.classList.contains('open')?'Ocultar CSS ↗':'Ver CSS de referência ↗'}));
+const pass=document.getElementById('password');document.getElementById('showPass').addEventListener('click',()=>{pass.type=pass.type==='password'?'text':'password'});
+let current='0', stored=null, op=null, reset=false;
+const disp=document.getElementById('calcDisplay');
+function calcInput(k){if(/[0-9]/.test(k)){if(reset||current==='0')current=k;else if(current.length<9)current+=k;reset=false;}else if(k==='.'){if(reset){current='0.';reset=false}else if(!current.includes('.'))current+='.';}else if(k==='='){if(stored!==null&&op){const a=Number(stored),b=Number(current);let v=op==='+'?a+b:op==='−'?a-b:op==='×'?a*b:a/(b||1);current=String(Number(v.toFixed(6)));stored=null;op=null;reset=true;}}else{stored=current;op=k;reset=true;}disp.textContent=current;}
+document.querySelectorAll('[data-key]').forEach(b=>b.addEventListener('click',()=>calcInput(b.dataset.key)));
 </script>
-</body></html>
+</body>
+</html>

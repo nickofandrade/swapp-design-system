@@ -1,18 +1,18 @@
-# Swapp Design System — conceito 01
+# Swapp — Biblioteca de componentes
 
-Site estático de documentação, sem build step.
+Documentação estática em português, inspirada na organização do Hubble Design System da Kenlo e construída a partir dos oito projetos originais do Swapp exportados do CodePen.
 
-## Como visualizar
-Abra `index.html` em um navegador. Para publicar, envie o conteúdo desta pasta para qualquer hospedagem estática (GitHub Pages, Netlify, Vercel ou servidor próprio).
+## Publicação
+- Arquivo principal: `index.html`
+- Sem build step: compatível com GitHub Pages a partir da raiz (`main` / `/`).
+- Logo: `assets/swapp-logo.png` — arquivo original fornecido, sem redesenho ou alteração.
 
-## Estrutura
-- `index.html`: documentação e demonstrações interativas.
-- Os oito projetos originais estão referenciados na seção “Telas do produto”, com links para os Pens no CodePen.
+## Escopo desta versão
+Esta versão documenta componentes, e não redesenha as telas inteiras. Os exemplos são derivados dos padrões presentes nos arquivos originais: botões, campos, login social, navegação, linhas de configuração, switches, perfil, badges, checkout, checkbox, teclas da calculadora e ícones de ação.
 
-## Escopo desta primeira versão
-A documentação consolida uma direção visual inicial a partir dos oito projetos fornecidos. Os previews das telas são esquemáticos e identificados como tal; não são reproduções pixel a pixel dos Pens. Tokens, componentes e diretrizes são uma proposta de evolução e devem ser validados antes de adoção em produção.
+Cada componente indica sua origem e separa a referência original das sugestões de evolução. Os exemplos interativos servem apenas para demonstração visual; não há autenticação nem processamento real de pagamentos.
 
-## Referências originais
+## Projetos originais
 - Landing Page — https://codepen.io/andrade_nicko/pen/WEvoby
 - Sign Up — https://codepen.io/andrade_nicko/pen/GvRbPp
 - User Profile — https://codepen.io/andrade_nicko/pen/yoOoEg
@@ -21,3 +21,5 @@ A documentação consolida uma direção visual inicial a partir dos oito projet
 - Credit Card Checkout — https://codepen.io/andrade_nicko/pen/gxbBwv
 - App Icon — https://codepen.io/andrade_nicko/pen/MvaGzV
 - 404 Page — https://codepen.io/andrade_nicko/pen/BdzgJm
+
+Os fontes exportados estão preservados em `reference-source/` para consulta.
