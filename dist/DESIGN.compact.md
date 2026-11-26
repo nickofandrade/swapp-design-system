@@ -33,3 +33,7 @@ Use este documento como contexto curto ao gerar ou modificar interfaces do Swapp
 - 42 ícones SVG individuais, incluídos em `swapp-ai-kit.zip` dentro de `dist/icons/`.
 - `assets/swapp-logo.png`: arquivo-mestre original da marca.
 - `assets/swapp-logo.svg`: vetorização auxiliar do contorno, opcional.
+
+
+## App icon
+Use `assets/swapp-app-icon.svg` ou `.png`: inicial S extraída do logotipo original sobre o gradiente laranja. Não substitua por uma letra tipográfica genérica.

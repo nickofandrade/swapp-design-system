@@ -98,6 +98,14 @@ A base foi extraída dos projetos exportados do CodePen: Landing Page, Sign Up, 
 
 O arquivo-mestre é `assets/swapp-logo.png`, fornecido pelo projeto e usado diretamente no portal. Preserve sua proporção original e a transparência; nunca aplique crop, máscara, fundo branco ou ícone substituto. `assets/swapp-logo.svg` é uma vetorização auxiliar do contorno extraído do PNG e só deve ser usada quando um formato vetorial for necessário. O PNG continua sendo a referência visual oficial.
 
+## Telas de referência ampliadas
+
+O portal completo inclui composições maiores de Cadastro, Perfil e Settings para avaliar os componentes em contexto. Use esses exemplos como reconstruções demonstrativas a partir dos projetos originais, mantendo separados os padrões observados e as recomendações propostas. O formulário combina campos pill, borda laranja, CTA magenta e alternativa social azul; o perfil reúne avatar, nome, localização, indicadores e ações; Settings demonstra linhas de preferência e switches.
+
+## App icon Swapp
+
+Use `assets/swapp-app-icon.svg` ou `assets/swapp-app-icon.png` quando o projeto pedir o ícone do aplicativo. O símbolo é a inicial S extraída do desenho vetorial original do logotipo, sobre o gradiente laranja `#FFA84C` → `#FF7B0D`. Não substitua por uma letra digitada em outra fonte, por setas ou por ícones genéricos. O logotipo completo continua em `assets/swapp-logo.png` e `assets/swapp-logo.svg`.
+
 ## Acessibilidade e evolução proposta
 
 As regras de acessibilidade aqui são recomendações de evolução, não características garantidas nos protótipos históricos: foco visível, labels, contraste verificado em contexto, mensagens de erro associadas a campos, estados disabled/loading e alvos de toque apropriados.

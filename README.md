@@ -21,3 +21,11 @@ A biblioteca foi estruturada a partir dos CSS e HTML exportados do CodePen: Land
 
 ## Marca
 `assets/swapp-logo.png` é o arquivo-mestre original fornecido. O portal o utiliza diretamente, sem recorte, redesenho ou alteração de proporção. `assets/swapp-logo.svg` é uma vetorização auxiliar do contorno e não substitui o PNG original.
+
+## Edições do portal
+- `/` — biblioteca completa com prévia e documentação técnica em painéis separados.
+- `/compact/` — referência vertical resumida, pensada para leitura e rolagem em telas pequenas.
+
+## Marca e app icon
+- `assets/swapp-logo.png` e `assets/swapp-logo.svg`: logotipo original.
+- `assets/swapp-app-icon.svg` e `.png`: app icon com a inicial extraída do desenho original do logotipo e o gradiente laranja original.
