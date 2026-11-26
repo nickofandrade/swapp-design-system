@@ -96,7 +96,7 @@ A base foi extraída dos projetos exportados do CodePen: Landing Page, Sign Up, 
 
 ## Logotipo oficial
 
-O arquivo-mestre é `assets/swapp-logo.png`, fornecido pelo projeto e usado diretamente no portal. Preserve sua proporção original e a transparência; nunca aplique crop, máscara, fundo branco ou ícone substituto. `assets/swapp-logo.svg` é uma vetorização auxiliar do contorno extraído do PNG e só deve ser usada quando um formato vetorial for necessário. O PNG continua sendo a referência visual oficial.
+O arquivo-mestre é `assets/swapp-logo.svg`, fornecido pelo projeto e usado diretamente no portal. Preserve sua proporção original e a transparência; nunca aplique crop, máscara, fundo branco ou ícone substituto. `assets/swapp-logo.svg` é uma vetorização auxiliar do contorno extraído do PNG e só deve ser usada quando um formato vetorial for necessário. O PNG continua sendo a referência visual oficial.
 
 ## Telas de referência ampliadas
 
@@ -104,7 +104,7 @@ O portal completo inclui composições maiores de Cadastro, Perfil e Settings pa
 
 ## App icon Swapp
 
-Use `assets/swapp-app-icon.svg` ou `assets/swapp-app-icon.png` quando o projeto pedir o ícone do aplicativo. O símbolo é a inicial S extraída do desenho vetorial original do logotipo, sobre o gradiente laranja `#FFA84C` → `#FF7B0D`. Não substitua por uma letra digitada em outra fonte, por setas ou por ícones genéricos. O logotipo completo continua em `assets/swapp-logo.png` e `assets/swapp-logo.svg`.
+Use `assets/swapp-app-icon.svg` ou `assets/swapp-app-icon.png` quando o projeto pedir o ícone do aplicativo. O símbolo é a inicial S extraída do desenho vetorial original do logotipo, sobre o gradiente laranja `#FFA84C` → `#FF7B0D`. Não substitua por uma letra digitada em outra fonte, por setas ou por ícones genéricos. O logotipo completo continua em `assets/swapp-logo.svg` e `assets/swapp-logo.svg`.
 
 ## Acessibilidade e evolução proposta
 
