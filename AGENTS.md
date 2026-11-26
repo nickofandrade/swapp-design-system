@@ -1,0 +1,3 @@
+# Swapp UI — project instructions
+
+Read `dist/DESIGN.md` before creating or changing interface code. Use `dist/DESIGN.compact.md` when context length is constrained. Preserve the original Swapp logo from `assets/swapp-logo.svg`. Do not replace the logo with a generic icon. Reuse CSS variables from `dist/variables.css`, the Tailwind v4 theme from `dist/tailwind.css`, the W3C DTCG tokens from `dist/tokens.json`, and the SVG icon set from `dist/icons/`. Treat source-observed values and proposed improvements as separate categories. Do not include the calculator as an example screen.

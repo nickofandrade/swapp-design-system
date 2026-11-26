@@ -1,0 +1,7 @@
+---
+description: Preserve the original Swapp interface identity and reuse its design tokens and components
+globs: **/*.{html,css,js,jsx,tsx,vue,svelte}
+alwaysApply: true
+---
+
+Follow `dist/DESIGN.md`. Preserve the original logo, Averia Sans Libre, original orange/magenta/social-blue palette, pill-shaped buttons and fields. Reuse `dist/variables.css`, `dist/tailwind.css`, `dist/tokens.json` and `dist/icons/`. Separate source-observed rules from proposed improvements.

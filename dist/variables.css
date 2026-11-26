@@ -1,0 +1,38 @@
+/* Swapp Design System — CSS Variables */
+:root {
+  --swapp-orange: #FF7B0D; /* Ação e fundo principal em botões e gradientes */
+  --swapp-orange-light: #FFA84C; /* Ponta clara do gradiente e hover do botão laranja */
+  --swapp-orange-top: #FF7F13; /* Barra superior dos layouts mobile */
+  --swapp-orange-border: #FFA200; /* Borda dos campos de texto */
+  --swapp-magenta: #C40BD5; /* Botão principal e fundo do fluxo 404 */
+  --swapp-magenta-hover: #EA00FF; /* Hover do botão magenta e gradiente 404 */
+  --swapp-facebook: #3A589A; /* Botão de cadastro social */
+  --swapp-facebook-hover: #4E6DB2; /* Hover do botão social */
+  --swapp-coral: #E19C8A; /* Texto de campo e teclas circulares */
+  --swapp-placeholder: #E1E1E1; /* Texto de placeholder */
+  --swapp-orange-profile: #FFA446; /* Fundo de linhas de perfil */
+  --swapp-orange-hero: #FF8820; /* Sobreposição da hero da landing page */
+  --swapp-white: #FFFFFF; /* Texto e superfícies de componentes */
+  --swapp-disabled-gray: #CCCCCC; /* Fundo do switch desativado */
+  --swapp-font-ui: "Averia Sans Libre", cursive;
+  --swapp-button-height: 44px;
+  --swapp-button-width: 200px;
+  --swapp-input-width: 170px;
+  --swapp-input-content-height: 24px;
+  --swapp-screen-width: 270px;
+  --swapp-screen-height: 480px;
+  --swapp-radius-pill: 50px;
+  --swapp-radius-screen: 8px;
+  --swapp-transition: .3s ease-in-out;
+  --swapp-shadow-screen: 10px 25px 60px 10px rgba(0,0,0,.2);
+}
+
+/* Reusable patterns reconstructed from the original Swapp source CSS. */
+.swapp-button { min-height: var(--swapp-button-height); min-width: var(--swapp-button-width); border: 0; border-radius: var(--swapp-radius-pill); padding: 0 18px; background: var(--swapp-magenta); color: var(--swapp-white); font: 15px var(--swapp-font-ui); text-transform: uppercase; transition: var(--swapp-transition); }
+.swapp-button:hover { background: var(--swapp-magenta-hover); box-shadow: 1px 2px 0 rgba(0,0,0,.1); }
+.swapp-button--orange { background: var(--swapp-orange); } .swapp-button--orange:hover { background: var(--swapp-orange-light); }
+.swapp-input { width: var(--swapp-input-width); height: 46px; box-sizing: border-box; border: 1px solid var(--swapp-orange-border); border-radius: var(--swapp-radius-pill); padding: 10px 15px; color: var(--swapp-coral); font: 15px var(--swapp-font-ui); }
+.swapp-input::placeholder { color: var(--swapp-placeholder); }
+.swapp-screen { width: var(--swapp-screen-width); height: var(--swapp-screen-height); border-radius: var(--swapp-radius-screen); background: linear-gradient(135deg,var(--swapp-orange-light),var(--swapp-orange)); box-shadow: var(--swapp-shadow-screen); font-family: var(--swapp-font-ui); }
+.swapp-social-button { min-height: 50px; width: 100%; border: 0; border-radius: 0 0 8px 8px; background: var(--swapp-facebook); color: var(--swapp-white); font: 14px var(--swapp-font-ui); }
+.swapp-switch { accent-color: var(--swapp-orange); }

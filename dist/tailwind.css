@@ -1,0 +1,23 @@
+/* Swapp Design System — Tailwind CSS v4 theme entrypoint */
+@import "tailwindcss";
+@import "./variables.css";
+
+@theme {
+  --color-swapp-orange: #FF7B0D;
+  --color-swapp-orange-light: #FFA84C;
+  --color-swapp-orange-top: #FF7F13;
+  --color-swapp-orange-border: #FFA200;
+  --color-swapp-magenta: #C40BD5;
+  --color-swapp-magenta-hover: #EA00FF;
+  --color-swapp-facebook: #3A589A;
+  --color-swapp-facebook-hover: #4E6DB2;
+  --color-swapp-coral: #E19C8A;
+  --color-swapp-placeholder: #E1E1E1;
+  --color-swapp-white: #FFFFFF;
+  --font-swapp-ui: "Averia Sans Libre", cursive;
+  --radius-swapp-pill: 50px;
+  --radius-swapp-screen: 8px;
+  --spacing-swapp-screen-width: 270px;
+  --spacing-swapp-screen-height: 480px;
+  --spacing-swapp-button-height: 44px;
+}

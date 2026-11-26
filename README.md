@@ -1,29 +1,22 @@
-# Swapp — Biblioteca de componentes
+# Swapp Design System
 
-Documentação estática em português, inspirada na organização do Hubble Design System da Kenlo e construída a partir dos oito projetos originais do Swapp exportados do CodePen.
+Biblioteca de referência com estrutura inspirada no Hubble Design System da Kenlo: prévia renderizada à esquerda e documentação/distribuição à direita.
 
-## Publicação
-- Arquivo principal: `index.html`
-- Sem build step: compatível com GitHub Pages a partir da raiz (`main` / `/`).
-- Logo: `assets/swapp-logo.png` — arquivo original fornecido, sem redesenho ou alteração.
+## Começar
+Abra `index.html` em um servidor estático. Não há build step. O site é compatível com GitHub Pages na raiz do branch `main`.
 
-## Escopo desta versão
-Esta versão documenta componentes, e não redesenha as telas inteiras. Os exemplos são derivados dos padrões presentes nos arquivos originais: botões, campos, login social, navegação, linhas de configuração, switches, perfil, badges, checkout, checkbox e ícones de ação.
+## Distribuição para código e IA
+- `dist/DESIGN.md`: documentação extended para contexto de agentes.
+- `dist/DESIGN.compact.md`: instruções compactas.
+- `dist/tailwind.css`: entrada de tema para Tailwind CSS v4.
+- `dist/variables.css`: CSS variables e padrões reutilizáveis.
+- `dist/tokens.json`: tokens W3C DTCG.
+- 42 ícones SVG individuais dentro de `dist/icons/` no pacote `swapp-ai-kit.zip`.
+- `swapp-ai-kit.zip`: bundle com docs, tokens, styles, ícones e marca.
+- `AGENTS.md`, `CLAUDE.md`, `.cursor/rules/swapp-design.mdc`: pontos de entrada para agentes.
 
-Cada componente indica sua origem e separa a referência original das sugestões de evolução. Os exemplos interativos servem apenas para demonstração visual; não há autenticação nem processamento real de pagamentos.
-
-## Projetos originais
-- Landing Page — https://codepen.io/andrade_nicko/pen/WEvoby
-- Sign Up — https://codepen.io/andrade_nicko/pen/GvRbPp
-- User Profile — https://codepen.io/andrade_nicko/pen/yoOoEg
-- Settings — https://codepen.io/andrade_nicko/pen/GvqqBy
-- Credit Card Checkout — https://codepen.io/andrade_nicko/pen/gxbBwv
-- App Icon — https://codepen.io/andrade_nicko/pen/MvaGzV
-- 404 Page — https://codepen.io/andrade_nicko/pen/BdzgJm
-
-Os fontes exportados estão preservados em `reference-source/` para consulta.
+## Base e rastreabilidade
+Os tokens foram extraídos dos CSS dos projetos exportados do CodePen: Landing Page, Sign Up, User Profile, Settings, Credit Card Checkout, App Icon e 404 Page. A calculadora não aparece na biblioteca nem nos exemplos de telas, conforme escopo definido. Valores e componentes identificados como originais vêm dos arquivos fonte; recomendações de acessibilidade e consistência estão rotuladas como evolução proposta.
 
 ## Marca
-- `assets/swapp-logo.png`: arquivo original usado no site, sem redesenho ou alteração.
-- `assets/swapp-logo.svg`: versão vetorial monocromática para uso em fundos escuros.
-- O logo é exibido sobre o fundo escuro da navegação para preservar o contraste e não desaparecer sobre um cartão branco.
+O logotipo original é mantido em `assets/swapp-logo.svg`, com contorno vetorizado a partir do arquivo mestre e fundo transparente. O PNG mestre original é incluído no pacote `swapp-ai-kit.zip`.

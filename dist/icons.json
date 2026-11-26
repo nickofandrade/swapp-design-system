@@ -1,0 +1,170 @@
+[
+  {
+    "name": "home",
+    "label": "Início"
+  },
+  {
+    "name": "menu",
+    "label": "Menu"
+  },
+  {
+    "name": "search",
+    "label": "Buscar"
+  },
+  {
+    "name": "arrow-left",
+    "label": "Voltar"
+  },
+  {
+    "name": "arrow-right",
+    "label": "Avançar"
+  },
+  {
+    "name": "chevron-down",
+    "label": "Expandir"
+  },
+  {
+    "name": "external-link",
+    "label": "Abrir"
+  },
+  {
+    "name": "share",
+    "label": "Compartilhar"
+  },
+  {
+    "name": "user",
+    "label": "Perfil"
+  },
+  {
+    "name": "users",
+    "label": "Pessoas"
+  },
+  {
+    "name": "heart",
+    "label": "Favoritar"
+  },
+  {
+    "name": "star",
+    "label": "Avaliação"
+  },
+  {
+    "name": "map-pin",
+    "label": "Localização"
+  },
+  {
+    "name": "camera",
+    "label": "Câmera"
+  },
+  {
+    "name": "image",
+    "label": "Imagem"
+  },
+  {
+    "name": "settings",
+    "label": "Ajustes"
+  },
+  {
+    "name": "repeat",
+    "label": "Trocar"
+  },
+  {
+    "name": "plus",
+    "label": "Adicionar"
+  },
+  {
+    "name": "minus",
+    "label": "Remover"
+  },
+  {
+    "name": "edit",
+    "label": "Editar"
+  },
+  {
+    "name": "trash",
+    "label": "Excluir"
+  },
+  {
+    "name": "copy",
+    "label": "Copiar"
+  },
+  {
+    "name": "filter",
+    "label": "Filtrar"
+  },
+  {
+    "name": "sliders",
+    "label": "Ordenar"
+  },
+  {
+    "name": "check",
+    "label": "Confirmar"
+  },
+  {
+    "name": "check-circle",
+    "label": "Sucesso"
+  },
+  {
+    "name": "x",
+    "label": "Fechar"
+  },
+  {
+    "name": "x-circle",
+    "label": "Erro"
+  },
+  {
+    "name": "alert-circle",
+    "label": "Atenção"
+  },
+  {
+    "name": "info",
+    "label": "Informação"
+  },
+  {
+    "name": "eye",
+    "label": "Mostrar"
+  },
+  {
+    "name": "eye-off",
+    "label": "Ocultar"
+  },
+  {
+    "name": "bell",
+    "label": "Notificações"
+  },
+  {
+    "name": "mail",
+    "label": "E-mail"
+  },
+  {
+    "name": "message-circle",
+    "label": "Mensagem"
+  },
+  {
+    "name": "calendar",
+    "label": "Calendário"
+  },
+  {
+    "name": "clock",
+    "label": "Horário"
+  },
+  {
+    "name": "lock",
+    "label": "Cadeado"
+  },
+  {
+    "name": "credit-card",
+    "label": "Cartão"
+  },
+  {
+    "name": "wallet",
+    "label": "Carteira"
+  },
+  {
+    "name": "tag",
+    "label": "Etiqueta"
+  },
+  {
+    "name": "shopping-bag",
+    "label": "Sacola"
+  }
+]
