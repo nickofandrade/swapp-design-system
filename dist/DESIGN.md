@@ -94,6 +94,10 @@ A base foi extraída dos projetos exportados do CodePen: Landing Page, Sign Up, 
 - Biblioteca incluída: 42 ícones SVG, 24×24, traço consistente. Cada arquivo individual pode ser copiado ou importado.
 - Não substitua o logotipo pela seta de troca ou por qualquer ícone da biblioteca.
 
+## Logotipo oficial
+
+O arquivo-mestre é `assets/swapp-logo.png`, fornecido pelo projeto e usado diretamente no portal. Preserve sua proporção original e a transparência; nunca aplique crop, máscara, fundo branco ou ícone substituto. `assets/swapp-logo.svg` é uma vetorização auxiliar do contorno extraído do PNG e só deve ser usada quando um formato vetorial for necessário. O PNG continua sendo a referência visual oficial.
+
 ## Acessibilidade e evolução proposta
 
 As regras de acessibilidade aqui são recomendações de evolução, não características garantidas nos protótipos históricos: foco visível, labels, contraste verificado em contexto, mensagens de erro associadas a campos, estados disabled/loading e alvos de toque apropriados.

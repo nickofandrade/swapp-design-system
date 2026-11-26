@@ -17,7 +17,7 @@ Use este documento como contexto curto ao gerar ou modificar interfaces do Swapp
 - Tela 404: gradiente `#C40BD5` → `#EA00FF`.
 
 ## Regras para geração de UI
-1. Não redesenhe, substitua, simplifique ou invente o logo. Use `assets/swapp-logo.svg`, mantendo a proporção e o fundo transparente.
+1. Não redesenhe, substitua, simplifique ou invente o logo. Use `assets/swapp-logo.png` como arquivo-mestre. Preserve a proporção e a transparência; `assets/swapp-logo.svg` é apenas uma vetorização auxiliar do contorno, não substitui o PNG original.
 2. Use `Averia Sans Libre` para UI. Não substitua a família sem solicitação explícita.
 3. Preserve a combinação laranja + magenta e o azul reservado ao login social. Não transforme o projeto em outro sistema visual.
 4. Preserve a linguagem arredondada dos botões e campos. Evite cantos quadrados nos CTAs e inputs.
@@ -31,4 +31,5 @@ Use este documento como contexto curto ao gerar ou modificar interfaces do Swapp
 - `dist/tailwind.css`: entrada de tema para Tailwind CSS v4.
 - `dist/tokens.json`: tokens no formato W3C DTCG.
 - 42 ícones SVG individuais, incluídos em `swapp-ai-kit.zip` dentro de `dist/icons/`.
-- `assets/swapp-logo.svg`: marca original e versão vetorial.
+- `assets/swapp-logo.png`: arquivo-mestre original da marca.
+- `assets/swapp-logo.svg`: vetorização auxiliar do contorno, opcional.
