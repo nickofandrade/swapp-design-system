@@ -22,8 +22,8 @@ body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.6 var(--doc-f
 button,input{font:inherit}button{cursor:pointer}
 a{color:inherit}
 .sidebar{position:fixed;inset:0 auto 0 0;width:248px;background:#211b24;color:#f7f1f5;padding:22px 16px;overflow:auto;z-index:10}
-.brand-panel{background:#fff;border-radius:12px;padding:9px 12px;margin:0 6px 22px;display:flex;align-items:center;justify-content:center;min-height:78px}
-.brand-panel img{display:block;width:138px;height:auto;max-height:70px;object-fit:contain}
+.brand-panel{background:transparent;border-radius:0;padding:0 4px;margin:0 4px 18px;display:flex;align-items:center;justify-content:center;min-height:96px}
+.brand-panel img{display:block;width:100%;height:auto;max-height:112px;object-fit:contain}
 .brand-caption{font:10px var(--mono);letter-spacing:.13em;text-transform:uppercase;color:#a99eaa;margin:0 9px 16px}
 .nav-label{font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#9e929f;padding:14px 10px 7px}
 .nav a{display:flex;align-items:center;gap:11px;text-decoration:none;color:#d1c8d2;padding:9px 10px;border-radius:9px;margin:2px 0;font-size:13px;transition:.18s}
@@ -39,8 +39,6 @@ main{margin-left:248px;max-width:1500px;padding:0 48px 70px}
 .kicker{color:var(--magenta);font:10px var(--mono);letter-spacing:.15em;text-transform:uppercase;margin:0 0 9px}
 h1{font-size:40px;line-height:1.08;letter-spacing:-.04em;margin:0 0 10px;font-weight:700}
 .page-intro p{color:var(--muted);font-size:15px;max-width:690px;margin:0}
-.intro-mark{width:92px;height:92px;border-radius:24px;background:linear-gradient(140deg,var(--orange-light),var(--orange));display:grid;place-items:center;color:#fff;flex:none;box-shadow:0 10px 25px #ff7b0d30}
-.intro-mark svg{width:49px;height:49px;stroke:currentColor;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
 .color-strip{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:18px 0 0}
 .color-chip{width:17px;height:17px;border-radius:5px;border:1px solid #00000012}.color-note{font:10px var(--mono);color:#938995;margin-left:4px}
 .section{padding:0 0 44px;margin:0 0 42px;border-bottom:1px solid var(--line);scroll-margin-top:24px}
@@ -79,20 +77,20 @@ h2{font-size:25px;line-height:1.2;letter-spacing:-.025em;margin:0;font-weight:70
 .profile-demo{width:100%;max-width:320px;background:linear-gradient(135deg,var(--orange-light),var(--orange));border-radius:10px;padding:19px 16px 16px;color:#fff;font-family:var(--ui-font);text-align:center}.avatar{width:76px;height:76px;border:3px solid #fff;border-radius:50%;background:#fff4e8;color:var(--orange);display:grid;place-items:center;margin:0 auto 9px;font-size:27px}.profile-demo h4{font-size:21px;font-weight:400;margin:0}.profile-demo p{font-size:12px;margin:1px 0 14px;color:#fffde9}.profile-stats{display:flex;justify-content:center;gap:10px;margin-bottom:13px}.profile-stat{background:#ffffff22;border:1px solid #ffffff31;padding:7px 12px;border-radius:8px;font-size:11px}.profile-actions{display:flex;justify-content:center;gap:10px}.profile-actions .ui-icon-btn{width:40px;height:40px;background:var(--magenta)}
 .checkbox{display:flex;align-items:center;gap:9px;font:13px var(--ui-font);color:#5e5360}.checkbox input{appearance:none;width:18px;height:18px;border:1px solid var(--orange-border);border-radius:4px;background:#fff;margin:0;display:grid;place-items:center}.checkbox input:checked{background:var(--magenta);border-color:var(--magenta)}.checkbox input:checked:after{content:"✓";color:#fff;font:13px var(--doc-font);font-weight:700}
 .pay-card{width:min(100%,320px);background:linear-gradient(135deg,var(--orange-light),var(--orange));padding:17px;border-radius:10px;color:#fff;font:13px var(--ui-font)}.pay-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.pay-title svg{width:23px;height:23px;stroke:#fff;fill:none;stroke-width:1.7}.pay-card .ui-field{height:39px;font-size:12px;margin:4px 0}.pay-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px}.pay-foot{display:flex;justify-content:space-between;align-items:center;margin-top:11px;font-size:11px}
-.calc{width:220px;background:linear-gradient(140deg,var(--orange-light),var(--orange));border-radius:10px;padding:14px;color:#fff;font-family:var(--ui-font);box-shadow:0 8px 20px #4a281c16}.calc-display{text-align:right;font-size:30px;line-height:1.6;padding:8px 8px 18px;min-height:68px;overflow:hidden}.calc-keys{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.calc-key{height:39px;border:0;border-radius:50%;background:#fff;color:var(--coral);font:18px var(--ui-font)}.calc-key.operator{background:var(--magenta);color:#fff}.calc-key.operator:hover{background:var(--magenta-hover)}.calc-key:active{transform:scale(.95)}.calc-key.wide{grid-column:span 2;border-radius:28px;text-align:left;padding-left:15px}
-.icon-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.icon-item{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 7px;text-align:center;display:grid;gap:7px;justify-items:center}.icon-item svg{width:23px;height:23px;color:var(--orange);stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}.icon-item span{font:9px var(--mono);color:#807583}
+
+.icon-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.icon-item{appearance:none;width:100%;min-width:0;background:#fff;border:1px solid var(--line);border-radius:11px;padding:15px 8px 13px;text-align:center;display:grid;gap:8px;justify-items:center;color:var(--ink);transition:border-color .18s,transform .18s,box-shadow .18s}.icon-item:hover{border-color:var(--orange-light);transform:translateY(-2px);box-shadow:0 5px 14px #211b240c}.icon-item:focus-visible{outline:3px solid #c40bd536;outline-offset:2px}.icon-item svg{width:25px;height:25px;color:var(--orange);stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}.icon-item .icon-name{font:10px var(--doc-font);font-weight:600;color:#514653}.icon-item .icon-code{font:8px var(--mono);color:#9b909d;letter-spacing:.01em}.icon-category{font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--magenta);margin:22px 0 10px}.icon-status{font:10px var(--mono);color:#938995;margin:0 0 14px}
 .note-panel{border:1px solid #f1d9f0;background:#fff8ff;border-radius:11px;padding:15px 17px;color:#655365;font-size:12px;margin-top:17px}.note-panel strong{color:#93229b}
 .code-toggle{border:0;background:none;color:#93229b;font:10px var(--mono);padding:7px 16px 11px}.code{display:none;margin:0 15px 14px;padding:12px;background:#211b24;color:#f6ecf7;border-radius:8px;white-space:pre-wrap;overflow:auto;font:10px/1.6 var(--mono)}.code.open{display:block}
 .footer{border-top:1px solid var(--line);padding:22px 0 0;color:#948a95;font:10px var(--mono);display:flex;justify-content:space-between;gap:16px}
-@media(max-width:1050px){main{padding:0 28px 60px}.icon-grid{grid-template-columns:repeat(4,1fr)}}
-@media(max-width:760px){.sidebar{transform:translateX(-100%);transition:transform .25s}.sidebar.open{transform:translateX(0)}main{margin-left:0;padding:0 18px 50px}.mobile-menu{display:block}.topbar{height:60px;margin-bottom:28px}.page-intro{align-items:flex-start}.intro-mark{width:65px;height:65px;border-radius:18px}.intro-mark svg{width:35px;height:35px}h1{font-size:32px}.component-grid{grid-template-columns:1fr}.icon-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:430px){.page-intro{gap:10px}.intro-mark{display:none}.section-head{align-items:flex-start}.count{display:none}.topbar{margin-bottom:24px}.color-note{width:100%;margin:4px 0 0}}
+@media(max-width:1050px){main{padding:0 28px 60px}.icon-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:760px){.sidebar{transform:translateX(-100%);transition:transform .25s}.sidebar.open{transform:translateX(0)}main{margin-left:0;padding:0 18px 50px}.mobile-menu{display:block}.topbar{height:60px;margin-bottom:28px}.page-intro{align-items:flex-start}h1{font-size:32px}.component-grid{grid-template-columns:1fr}.icon-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:430px){.page-intro{gap:10px}.section-head{align-items:flex-start}.count{display:none}.topbar{margin-bottom:24px}.color-note{width:100%;margin:4px 0 0}}
 </style>
 </head>
 <body>
 <aside class="sidebar" id="sidebar">
-  <div class="brand-panel"><img src="assets/swapp-logo.svg" alt="Logo original Swapp"></div>
-  <div class="brand-caption">Biblioteca de componentes · v0.2</div>
+  <div class="brand-panel"><img src="assets/swapp-logo.png" alt="Logo original Swapp"></div>
+  <div class="brand-caption">Biblioteca de componentes · v0.3</div>
   <nav class="nav" aria-label="Navegação da documentação">
     <div class="nav-label">Componentes</div>
     <a class="active" href="#buttons"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="10" rx="5"/></svg> Botões e ações</a>
@@ -100,7 +98,6 @@ h2{font-size:25px;line-height:1.2;letter-spacing:-.025em;margin:0;font-weight:70
     <a href="#navigation"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg> Navegação e listas</a>
     <a href="#profile"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c.7-4 3.4-6 8-6s7.3 2 8 6"/></svg> Perfil e indicadores</a>
     <a href="#payment"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4"/></svg> Pagamento</a>
-    <a href="#calculator"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2"/></svg> Teclado e calculadora</a>
     <a href="#icons"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg> Ícones</a>
   </nav>
   <div class="side-note">Referências: os oito projetos originais do Swapp, exportados do CodePen. O que já existia e as sugestões de evolução estão identificados separadamente.</div>
@@ -108,17 +105,16 @@ h2{font-size:25px;line-height:1.2;letter-spacing:-.025em;margin:0;font-weight:70
 <main>
   <header class="topbar">
     <div style="display:flex;align-items:center;gap:12px"><button class="mobile-menu" id="menuBtn" aria-label="Abrir navegação">☰</button><span class="crumb">SWAPP / DESIGN SYSTEM / COMPONENTES</span></div>
-    <span class="version">COMPONENT LIBRARY · 0.2</span>
+    <span class="version">COMPONENT LIBRARY · 0.3</span>
   </header>
   <div class="page-intro">
     <div><p class="kicker">Biblioteca · base original + evolução</p><h1>Componentes</h1><p>Peças reutilizáveis da interface Swapp, organizadas a partir dos projetos originais. Cada exemplo preserva a linguagem visual de origem e aponta evoluções possíveis sem substituir a identidade da marca.</p>
       <div class="color-strip" aria-label="Cores principais"><i class="color-chip" style="background:#ffa84c"></i><i class="color-chip" style="background:#ff7b0d"></i><i class="color-chip" style="background:#ff7f13"></i><i class="color-chip" style="background:#c40bd5"></i><i class="color-chip" style="background:#ea00ff"></i><i class="color-chip" style="background:#3a589a"></i><i class="color-chip" style="background:#e19c8a"></i><span class="color-note">Paleta extraída dos CSS originais</span></div>
     </div>
-    <div class="intro-mark" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 17.5c0-4.1 3.3-7.5 7.5-7.5h17a7.5 7.5 0 0 1 0 15h-17a7.5 7.5 0 0 0 0 15h17c4.1 0 7.5-3.3 7.5-7.5"/><path d="M17 6v7M31 35v7"/></svg></div>
   </div>
 
   <section class="section" id="buttons">
-    <div class="section-head"><div><div class="section-index">01 / AÇÕES</div><h2>Botões e ações</h2><p class="section-desc">A ação principal aparece em magenta nos fluxos de cadastro, checkout e calculadora. O laranja aparece como alternativa em contextos de marca e na tela 404.</p></div><span class="count">4 VARIAÇÕES</span></div>
+    <div class="section-head"><div><div class="section-index">01 / AÇÕES</div><h2>Botões e ações</h2><p class="section-desc">A ação principal aparece em magenta nos fluxos de cadastro e checkout. O laranja aparece como alternativa em contextos de marca e na tela 404.</p></div><span class="count">4 VARIAÇÕES</span></div>
     <div class="component-grid">
       <article class="component-card"><div class="component-top"><h3>Botão principal</h3><span class="source-tag">Sign Up · Checkout</span></div><div class="preview warm"><button class="ui-btn">Start swapping</button><button class="ui-btn" disabled>Indisponível</button></div><div class="spec-row"><span>44 px altura</span><span>50 px radius</span><span>#C40BD5</span><span>hover #EA00FF</span></div><div class="evolution"><strong>Evolução sugerida:</strong> manter o pill e o magenta. Padronizar larguras responsivas e explicitar estados de carregamento, foco por teclado e desabilitado.</div><button class="code-toggle" type="button">Ver CSS de referência ↗</button><pre class="code">background: #c40bd5;
 color: #fff;
@@ -153,7 +149,7 @@ font: 15px 'Averia Sans Libre';</pre></article>
   </section>
 
   <section class="section" id="navigation">
-    <div class="section-head"><div><div class="section-index">03 / ESTRUTURA</div><h2>Navegação e listas</h2><p class="section-desc">O mesmo cabeçalho e os mesmos padrões de linha se repetem em Perfil, Settings, Calculator e Checkout.</p></div><span class="count">3 COMPONENTES</span></div>
+    <div class="section-head"><div><div class="section-index">03 / ESTRUTURA</div><h2>Navegação e listas</h2><p class="section-desc">O mesmo cabeçalho e os mesmos padrões de linha se repetem em Perfil, Settings e Checkout.</p></div><span class="count">3 COMPONENTES</span></div>
     <div class="component-grid">
       <article class="component-card"><div class="component-top"><h3>Barra superior</h3><span class="source-tag">Profile · Settings · Checkout</span></div><div class="preview warm"><div class="mini-screen"><div class="mini-top"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg><strong>Settings</strong><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 2h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 3h4l.5-3a7 7 0 0 0 2.6-1.5l2.4 1 2-3.5-2-1.5Z"/></svg></div></div></div><div class="spec-row"><span>50 px original</span><span>#FF7F13</span><span>radius 8 px</span></div><div class="evolution"><strong>Evolução sugerida:</strong> manter a faixa laranja e padronizar altura, área de toque e comportamento responsivo do menu e da ação à direita.</div></article>
       <article class="component-card"><div class="component-top"><h3>Linha de configuração</h3><span class="source-tag">Settings</span></div><div class="preview gradient"><div class="mini-screen"><div class="mini-top"><strong>Settings</strong><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 2h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 3h4l.5-3a7 7 0 0 0 2.6-1.5l2.4 1 2-3.5-2-1.5Z"/></svg></div><div class="settings-row"><span>Profile</span><span class="settings-action">Edit&nbsp; ›</span></div><div class="settings-row"><span>Facebook</span><span class="settings-action">Connect&nbsp; ›</span></div><div class="settings-row"><span>Notification</span><label class="toggle" aria-label="Ativar notificações"><input type="checkbox" checked><span class="track"></span></label></div><div class="settings-row"><span>Session</span><span class="settings-action">Logout&nbsp; ›</span></div></div></div><div class="spec-row"><span>linha 40 px no original</span><span>ícone + label + ação</span></div><div class="evolution"><strong>Evolução sugerida:</strong> transformar a linha em componente clicável com variantes para link, ação, toggle e item desabilitado; preservar a leitura simples.</div></article>
@@ -184,41 +180,148 @@ background: #ff7f13;</pre></article>
     </div>
   </section>
 
-  <section class="section" id="calculator">
-    <div class="section-head"><div><div class="section-index">06 / CONTROLES</div><h2>Teclado e calculadora</h2><p class="section-desc">A calculadora fornece uma família de botões circulares: teclas numéricas brancas e teclas de operação magenta.</p></div><span class="count">TECLAS INTERATIVAS</span></div>
-    <div class="component-grid">
-      <article class="component-card"><div class="component-top"><h3>Teclado numérico</h3><span class="source-tag">Calculator</span></div><div class="preview gradient"><div class="calc"><div class="calc-display" id="calcDisplay">0</div><div class="calc-keys"><button class="calc-key" data-key="7">7</button><button class="calc-key" data-key="8">8</button><button class="calc-key" data-key="9">9</button><button class="calc-key operator" data-key="÷">÷</button><button class="calc-key" data-key="4">4</button><button class="calc-key" data-key="5">5</button><button class="calc-key" data-key="6">6</button><button class="calc-key operator" data-key="×">×</button><button class="calc-key" data-key="1">1</button><button class="calc-key" data-key="2">2</button><button class="calc-key" data-key="3">3</button><button class="calc-key operator" data-key="−">−</button><button class="calc-key wide" data-key="0">0</button><button class="calc-key" data-key=".">.</button><button class="calc-key operator" data-key="+">+</button><button class="calc-key operator" data-key="=">=</button></div></div></div><div class="spec-row"><span>45 × 45 px original</span><span>raio 50%</span><span>numérica branca</span><span>operação magenta</span></div><div class="evolution"><strong>Evolução sugerida:</strong> padronizar tamanho das teclas, área de toque e estados pressionado/foco. O pequeno exemplo acima permite testar o comportamento visual.</div></article>
-      <article class="component-card"><div class="component-top"><h3>Família de teclas</h3><span class="source-tag">Calculator</span></div><div class="preview warm"><button class="calc-key" style="width:45px;height:45px">8</button><button class="calc-key operator" style="width:45px;height:45px">+</button><button class="calc-key" style="width:96px;height:45px;border-radius:40px;text-align:left;padding-left:15px">0</button></div><div class="spec-row"><span>key / number</span><span>key / operator</span><span>key / double-width</span></div><div class="evolution"><strong>Evolução sugerida:</strong> documentar tecla de número, operador, zero largo e estado de tecla ativa como variantes do mesmo componente.</div></article>
-    </div>
+    <section class="section" id="icons">
+    <div class="section-head"><div><div class="section-index">06 / LINGUAGEM VISUAL</div><h2>Ícones</h2><p class="section-desc">Uma família ampliada de ícones lineares para navegação, perfil, ações, formulários e pagamento. Os desenhos compartilham a mesma espessura de traço, terminais arredondados e proporção 24 × 24 para manter a leitura consistente.</p></div><span class="count">42 ÍCONES</span></div>
+    <p class="icon-status">Toque em qualquer ícone para copiar o SVG. A família usa traço de 1,75 px e viewBox 24 × 24.</p>
+    <h3 class="icon-category">Navegação</h3><div class="icon-grid"><button class="icon-item" type="button" data-icon-name="home" aria-label="Copiar SVG do ícone Início" title="Copiar SVG: home">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 10 9-7 9 7"/><path d="M5 9v12h14V9M9 21v-7h6v7"/></svg>
+      <span class="icon-name">Início</span><span class="icon-code">home</span>
+    </button><button class="icon-item" type="button" data-icon-name="menu" aria-label="Copiar SVG do ícone Menu" title="Copiar SVG: menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <span class="icon-name">Menu</span><span class="icon-code">menu</span>
+    </button><button class="icon-item" type="button" data-icon-name="search" aria-label="Copiar SVG do ícone Buscar" title="Copiar SVG: search">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+      <span class="icon-name">Buscar</span><span class="icon-code">search</span>
+    </button><button class="icon-item" type="button" data-icon-name="arrow-left" aria-label="Copiar SVG do ícone Voltar" title="Copiar SVG: arrow-left">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      <span class="icon-name">Voltar</span><span class="icon-code">arrow-left</span>
+    </button><button class="icon-item" type="button" data-icon-name="arrow-right" aria-label="Copiar SVG do ícone Avançar" title="Copiar SVG: arrow-right">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      <span class="icon-name">Avançar</span><span class="icon-code">arrow-right</span>
+    </button><button class="icon-item" type="button" data-icon-name="chevron-down" aria-label="Copiar SVG do ícone Expandir" title="Copiar SVG: chevron-down">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+      <span class="icon-name">Expandir</span><span class="icon-code">chevron-down</span>
+    </button><button class="icon-item" type="button" data-icon-name="external-link" aria-label="Copiar SVG do ícone Abrir" title="Copiar SVG: external-link">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg>
+      <span class="icon-name">Abrir</span><span class="icon-code">external-link</span>
+    </button><button class="icon-item" type="button" data-icon-name="share" aria-label="Copiar SVG do ícone Compartilhar" title="Copiar SVG: share">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.7 10.6 6.6-4.2M8.7 13.4l6.6 4.2"/></svg>
+      <span class="icon-name">Compartilhar</span><span class="icon-code">share</span>
+    </button></div><h3 class="icon-category">Conta e produto</h3><div class="icon-grid"><button class="icon-item" type="button" data-icon-name="user" aria-label="Copiar SVG do ícone Perfil" title="Copiar SVG: user">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21c.7-4 3.4-6 8-6s7.3 2 8 6"/></svg>
+      <span class="icon-name">Perfil</span><span class="icon-code">user</span>
+    </button><button class="icon-item" type="button" data-icon-name="users" aria-label="Copiar SVG do ícone Pessoas" title="Copiar SVG: users">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <span class="icon-name">Pessoas</span><span class="icon-code">users</span>
+    </button><button class="icon-item" type="button" data-icon-name="heart" aria-label="Copiar SVG do ícone Favoritar" title="Copiar SVG: heart">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 8.7c0 5.1-8.8 10.2-8.8 10.2S3.2 13.8 3.2 8.7A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/></svg>
+      <span class="icon-name">Favoritar</span><span class="icon-code">heart</span>
+    </button><button class="icon-item" type="button" data-icon-name="star" aria-label="Copiar SVG do ícone Avaliação" title="Copiar SVG: star">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg>
+      <span class="icon-name">Avaliação</span><span class="icon-code">star</span>
+    </button><button class="icon-item" type="button" data-icon-name="map-pin" aria-label="Copiar SVG do ícone Localização" title="Copiar SVG: map-pin">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+      <span class="icon-name">Localização</span><span class="icon-code">map-pin</span>
+    </button><button class="icon-item" type="button" data-icon-name="camera" aria-label="Copiar SVG do ícone Câmera" title="Copiar SVG: camera">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h3l2-3h6l2 3h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Z"/><circle cx="12" cy="13" r="4"/></svg>
+      <span class="icon-name">Câmera</span><span class="icon-code">camera</span>
+    </button><button class="icon-item" type="button" data-icon-name="image" aria-label="Copiar SVG do ícone Imagem" title="Copiar SVG: image">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+      <span class="icon-name">Imagem</span><span class="icon-code">image</span>
+    </button><button class="icon-item" type="button" data-icon-name="settings" aria-label="Copiar SVG do ícone Ajustes" title="Copiar SVG: settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 2h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 3h4l.5-3a7 7 0 0 0 2.6-1.5l2.4 1 2-3.5-2-1.5Z"/></svg>
+      <span class="icon-name">Ajustes</span><span class="icon-code">settings</span>
+    </button></div><h3 class="icon-category">Ações</h3><div class="icon-grid"><button class="icon-item" type="button" data-icon-name="repeat" aria-label="Copiar SVG do ícone Trocar" title="Copiar SVG: repeat">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg>
+      <span class="icon-name">Trocar</span><span class="icon-code">repeat</span>
+    </button><button class="icon-item" type="button" data-icon-name="plus" aria-label="Copiar SVG do ícone Adicionar" title="Copiar SVG: plus">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg>
+      <span class="icon-name">Adicionar</span><span class="icon-code">plus</span>
+    </button><button class="icon-item" type="button" data-icon-name="minus" aria-label="Copiar SVG do ícone Remover" title="Copiar SVG: minus">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/></svg>
+      <span class="icon-name">Remover</span><span class="icon-code">minus</span>
+    </button><button class="icon-item" type="button" data-icon-name="edit" aria-label="Copiar SVG do ícone Editar" title="Copiar SVG: edit">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m4 16.5-.8 4.3 4.3-.8L19 8.5 15.5 5 4 16.5Z"/><path d="m13.8 6.7 3.5 3.5"/></svg>
+      <span class="icon-name">Editar</span><span class="icon-code">edit</span>
+    </button><button class="icon-item" type="button" data-icon-name="trash" aria-label="Copiar SVG do ícone Excluir" title="Copiar SVG: trash">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/><path d="M10 11v5M14 11v5"/></svg>
+      <span class="icon-name">Excluir</span><span class="icon-code">trash</span>
+    </button><button class="icon-item" type="button" data-icon-name="copy" aria-label="Copiar SVG do ícone Copiar" title="Copiar SVG: copy">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h3"/></svg>
+      <span class="icon-name">Copiar</span><span class="icon-code">copy</span>
+    </button><button class="icon-item" type="button" data-icon-name="filter" aria-label="Copiar SVG do ícone Filtrar" title="Copiar SVG: filter">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5h16l-6.5 7.5V19l-3 1v-7.5L4 5Z"/></svg>
+      <span class="icon-name">Filtrar</span><span class="icon-code">filter</span>
+    </button><button class="icon-item" type="button" data-icon-name="sliders" aria-label="Copiar SVG do ícone Ordenar" title="Copiar SVG: sliders">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6h16M7 12h10M10 18h4"/><circle cx="8" cy="6" r="2"/><circle cx="15" cy="12" r="2"/></svg>
+      <span class="icon-name">Ordenar</span><span class="icon-code">sliders</span>
+    </button></div><h3 class="icon-category">Formulários e status</h3><div class="icon-grid"><button class="icon-item" type="button" data-icon-name="check" aria-label="Copiar SVG do ícone Confirmar" title="Copiar SVG: check">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 12 4 4L19 6"/></svg>
+      <span class="icon-name">Confirmar</span><span class="icon-code">check</span>
+    </button><button class="icon-item" type="button" data-icon-name="check-circle" aria-label="Copiar SVG do ícone Sucesso" title="Copiar SVG: check-circle">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16.5 9"/></svg>
+      <span class="icon-name">Sucesso</span><span class="icon-code">check-circle</span>
+    </button><button class="icon-item" type="button" data-icon-name="x" aria-label="Copiar SVG do ícone Fechar" title="Copiar SVG: x">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      <span class="icon-name">Fechar</span><span class="icon-code">x</span>
+    </button><button class="icon-item" type="button" data-icon-name="x-circle" aria-label="Copiar SVG do ícone Erro" title="Copiar SVG: x-circle">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6m0-6-6 6"/></svg>
+      <span class="icon-name">Erro</span><span class="icon-code">x-circle</span>
+    </button><button class="icon-item" type="button" data-icon-name="alert-circle" aria-label="Copiar SVG do ícone Atenção" title="Copiar SVG: alert-circle">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 8v5m0 3h.01"/></svg>
+      <span class="icon-name">Atenção</span><span class="icon-code">alert-circle</span>
+    </button><button class="icon-item" type="button" data-icon-name="info" aria-label="Copiar SVG do ícone Informação" title="Copiar SVG: info">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg>
+      <span class="icon-name">Informação</span><span class="icon-code">info</span>
+    </button><button class="icon-item" type="button" data-icon-name="eye" aria-label="Copiar SVG do ícone Mostrar" title="Copiar SVG: eye">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+      <span class="icon-name">Mostrar</span><span class="icon-code">eye</span>
+    </button><button class="icon-item" type="button" data-icon-name="eye-off" aria-label="Copiar SVG do ícone Ocultar" title="Copiar SVG: eye-off">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 3 18 18M10.6 10.6A2 2 0 0 0 13.4 13.4"/><path d="M9.9 5.2A10.6 10.6 0 0 1 12 5c6.5 0 10 7 10 7a13.6 13.6 0 0 1-3.1 3.8M6.2 6.2C3.5 8 2 12 2 12s3.5 7 10 7a10 10 0 0 0 3.1-.5"/></svg>
+      <span class="icon-name">Ocultar</span><span class="icon-code">eye-off</span>
+    </button><button class="icon-item" type="button" data-icon-name="bell" aria-label="Copiar SVG do ícone Notificações" title="Copiar SVG: bell">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+      <span class="icon-name">Notificações</span><span class="icon-code">bell</span>
+    </button><button class="icon-item" type="button" data-icon-name="mail" aria-label="Copiar SVG do ícone E-mail" title="Copiar SVG: mail">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      <span class="icon-name">E-mail</span><span class="icon-code">mail</span>
+    </button><button class="icon-item" type="button" data-icon-name="message-circle" aria-label="Copiar SVG do ícone Mensagem" title="Copiar SVG: message-circle">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9a8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/></svg>
+      <span class="icon-name">Mensagem</span><span class="icon-code">message-circle</span>
+    </button><button class="icon-item" type="button" data-icon-name="calendar" aria-label="Copiar SVG do ícone Calendário" title="Copiar SVG: calendar">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg>
+      <span class="icon-name">Calendário</span><span class="icon-code">calendar</span>
+    </button><button class="icon-item" type="button" data-icon-name="clock" aria-label="Copiar SVG do ícone Horário" title="Copiar SVG: clock">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      <span class="icon-name">Horário</span><span class="icon-code">clock</span>
+    </button><button class="icon-item" type="button" data-icon-name="lock" aria-label="Copiar SVG do ícone Cadeado" title="Copiar SVG: lock">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 1 1 8 0v3m-4 5v2"/></svg>
+      <span class="icon-name">Cadeado</span><span class="icon-code">lock</span>
+    </button></div><h3 class="icon-category">Pagamento</h3><div class="icon-grid"><button class="icon-item" type="button" data-icon-name="credit-card" aria-label="Copiar SVG do ícone Cartão" title="Copiar SVG: credit-card">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 9h18M7 15h4"/></svg>
+      <span class="icon-name">Cartão</span><span class="icon-code">credit-card</span>
+    </button><button class="icon-item" type="button" data-icon-name="wallet" aria-label="Copiar SVG do ícone Carteira" title="Copiar SVG: wallet">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 6.5h15a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h13"/><path d="M16 14h5"/><circle cx="16" cy="14" r=".7"/></svg>
+      <span class="icon-name">Carteira</span><span class="icon-code">wallet</span>
+    </button><button class="icon-item" type="button" data-icon-name="tag" aria-label="Copiar SVG do ícone Etiqueta" title="Copiar SVG: tag">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r="1"/></svg>
+      <span class="icon-name">Etiqueta</span><span class="icon-code">tag</span>
+    </button><button class="icon-item" type="button" data-icon-name="shopping-bag" aria-label="Copiar SVG do ícone Sacola" title="Copiar SVG: shopping-bag">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <span class="icon-name">Sacola</span><span class="icon-code">shopping-bag</span>
+    </button></div>
+    <div class="note-panel"><strong>Uso:</strong> prefira manter o mesmo tamanho e peso de traço dentro de uma mesma interface. Ícones funcionais devem ter rótulo acessível; não use o símbolo de troca como substituto do logo Swapp.</div>
   </section>
 
-  <section class="section" id="icons">
-    <div class="section-head"><div><div class="section-index">07 / LINGUAGEM VISUAL</div><h2>Ícones</h2><p class="section-desc">A família abaixo representa as ações que aparecem nos projetos: gostar, trocar, buscar, editar, perfil, configurações e pagamento. O desenho é linear, simples e legível em tamanhos pequenos.</p></div><span class="count">8 ÍCONES-BASE</span></div>
-    <div class="icon-grid">
-      <div class="icon-item"><svg viewBox="0 0 24 24"><path d="M20.8 8.7c0 5.1-8.8 10.2-8.8 10.2S3.2 13.8 3.2 8.7A4.7 4.7 0 0 1 12 6.1a4.7 4.7 0 0 1 8.8 2.6Z"/></svg><span>Like</span></div>
-      <div class="icon-item"><svg viewBox="0 0 24 24"><path d="M4 7h14l-3-3M20 17H6l3 3"/></svg><span>Swapp</span></div>
-      <div class="icon-item"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><span>Search</span></div>
-      <div class="icon-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c.7-4 3.4-6 8-6s7.3 2 8 6"/></svg><span>Profile</span></div>
-      <div class="icon-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 2h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 3h4l.5-3a7 7 0 0 0 2.6-1.5l2.4 1 2-3.5-2-1.5Z"/></svg><span>Settings</span></div>
-      <div class="icon-item"><svg viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="M3 9h18M7 15h4"/></svg><span>Payment</span></div>
-      <div class="icon-item"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M8 6h8M8 11h2M14 11h2M8 15h2M14 15h2M8 19h2M14 19h2"/></svg><span>Calculator</span></div>
-      <div class="icon-item"><svg viewBox="0 0 24 24"><path d="m4 16.5-.8 4.3 4.3-.8L19 8.5 15.5 5 4 16.5Z"/><path d="m13.8 6.7 3.5 3.5"/></svg><span>Edit</span></div>
-    </div>
-    <div class="note-panel"><strong>Nota sobre os ícones:</strong> estes exemplos organizam uma família coerente para documentar os usos observados. Não substituem nem alteram o logo original Swapp, que permanece como o arquivo de marca fornecido.</div>
-  </section>
-
-  <div class="footer"><span>SWAPP DESIGN SYSTEM · COMPONENT LIBRARY</span><span>Baseado nos projetos originais · proposta de evolução 0.2</span></div>
+  <div class="footer"><span>SWAPP DESIGN SYSTEM · COMPONENT LIBRARY</span><span>Baseado nos projetos originais · proposta de evolução 0.3</span></div>
 </main>
 <script>
 const sidebar=document.getElementById('sidebar');
 document.getElementById('menuBtn').addEventListener('click',()=>sidebar.classList.toggle('open'));
 document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('.nav a').forEach(x=>x.classList.remove('active'));a.classList.add('active');sidebar.classList.remove('open')}));
 document.querySelectorAll('.code-toggle').forEach(btn=>btn.addEventListener('click',()=>{const code=btn.nextElementSibling;code.classList.toggle('open');btn.textContent=code.classList.contains('open')?'Ocultar CSS ↗':'Ver CSS de referência ↗'}));
+document.querySelectorAll('.icon-item').forEach(btn=>btn.addEventListener('click',async()=>{const svg=btn.querySelector('svg').outerHTML;try{await navigator.clipboard.writeText(svg);const code=btn.querySelector('.icon-code');const original=code.textContent;code.textContent='copiado!';btn.classList.add('copied');setTimeout(()=>{code.textContent=original;btn.classList.remove('copied')},1100)}catch(e){const code=btn.querySelector('.icon-code');code.textContent='copie manualmente';setTimeout(()=>code.textContent=btn.dataset.iconName,1300)}}));
 const pass=document.getElementById('password');document.getElementById('showPass').addEventListener('click',()=>{pass.type=pass.type==='password'?'text':'password'});
-let current='0', stored=null, op=null, reset=false;
-const disp=document.getElementById('calcDisplay');
-function calcInput(k){if(/[0-9]/.test(k)){if(reset||current==='0')current=k;else if(current.length<9)current+=k;reset=false;}else if(k==='.'){if(reset){current='0.';reset=false}else if(!current.includes('.'))current+='.';}else if(k==='='){if(stored!==null&&op){const a=Number(stored),b=Number(current);let v=op==='+'?a+b:op==='−'?a-b:op==='×'?a*b:a/(b||1);current=String(Number(v.toFixed(6)));stored=null;op=null;reset=true;}}else{stored=current;op=k;reset=true;}disp.textContent=current;}
-document.querySelectorAll('[data-key]').forEach(b=>b.addEventListener('click',()=>calcInput(b.dataset.key)));
 </script>
 </body>
 </html>
