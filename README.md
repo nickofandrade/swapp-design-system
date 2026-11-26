@@ -23,3 +23,7 @@ Cada componente indica sua origem e separa a referência original das sugestões
 - 404 Page — https://codepen.io/andrade_nicko/pen/BdzgJm
 
 Os fontes exportados estão preservados em `reference-source/` para consulta.
+
+## Marca
+- `assets/swapp-logo.svg`: versão vetorial do logo original enviado, sem redesenho conceitual.
+- O PNG de referência permanece no repositório para comparação.
