@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Swapp — Logos e ícones</title>
+<style>
+:root{color-scheme:light;--ink:#29232d;--muted:#786f7b;--line:#eee6e1;--orange:#ff922d}
+*{box-sizing:border-box}body{margin:0;background:#fffaf6;color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{width:min(900px,calc(100% - 32px));margin:48px auto}header{margin-bottom:28px}h1{font-size:clamp(26px,5vw,38px);margin:0 0 8px}p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+article{background:white;border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:14px}
+.preview{height:180px;border-radius:12px;background:#fffaf6;display:grid;place-items:center;overflow:hidden}
+.preview img{max-width:85%;max-height:145px;object-fit:contain}
+.preview.icon{background:linear-gradient(135deg,#FFA84C,#FF7B0D)}
+.preview.icon img{width:128px;height:128px}
+h2{font-size:18px;margin:0}small{color:var(--muted)}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+a{color:#79277f;font-weight:650;text-decoration:none;border:1px solid #ead9eb;border-radius:8px;padding:8px 12px}
+a:hover{background:#faf1fb}
+footer{margin-top:28px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body><main>
+<header><h1>Swapp — Logos e ícones</h1><p>Arquivos oficiais da marca para aplicação no aplicativo e nos materiais do projeto.</p></header>
+<section class="grid">
+<article><div class="preview"><img src="./swapp-logo.png" alt="Logo Swapp"></div><h2>Logo completo</h2><small>Versão original da marca</small><div class="links"><a href="./swapp-logo.svg" download>Baixar SVG</a><a href="./swapp-logo.png" download>Baixar PNG</a></div></article>
+<article><div class="preview icon"><img src="./swapp-app-icon.svg" alt="Ícone Swapp com S e setas"></div><h2>Ícone do aplicativo</h2><small>S original centralizado sobre o gradiente laranja</small><div class="links"><a href="./swapp-app-icon.svg" download>Baixar SVG</a><a href="./swapp-app-icon.png" download>Baixar PNG</a></div></article>
+</section>
+<footer>Swapp Design System · Use os arquivos originais sem distorcer ou redesenhar a marca.</footer>
+</main></body></html>
